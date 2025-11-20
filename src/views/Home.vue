@@ -129,15 +129,15 @@ const handleTouchEnd = (e) => {
 
 .background-image {
   width: 100%;
-  height: 100%;
-  transition: transform 0.1s ease-out;
+  /* height: 100%; */
+  /* transition: transform 0.1s ease-out; */
 }
 
 .background-image img {
   width: 100%;
-  height: 100%;
+  /* height: 100%;
   object-fit: contain;
   user-select: none;
-  pointer-events: none;
+  pointer-events: none; */
 }
 </style>
