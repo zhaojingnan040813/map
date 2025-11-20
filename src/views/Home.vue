@@ -59,9 +59,7 @@ const handleTouchMove = (e) => {
     
     if (lastDistance > 0) {
       const scaleChange = currentDistance / lastDistance
-      let newScale = scale.value * scaleChange
-      newScale = Math.max(0.5, Math.min(3, newScale))
-      scale.value = newScale
+      scale.value = scale.value * scaleChange
     }
     
     if (lastTouches) {
@@ -98,6 +96,10 @@ const handleTouchEnd = (e) => {
   height: 100%;
   overflow: hidden;
   touch-action: none;
+  background-color: #dfdcb8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .background-image {
@@ -109,7 +111,7 @@ const handleTouchEnd = (e) => {
 .background-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   user-select: none;
   pointer-events: none;
 }
