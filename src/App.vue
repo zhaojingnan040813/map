@@ -1,11 +1,17 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import TabBar from './components/TabBar.vue'
 </script>
 
 <template>
-
-  <HelloWorld msg="Vite + Vue" />
+  <div id="app">
+    <router-view></router-view>
+    <TabBar />
+  </div>
 </template>
 
 <style scoped>
+#app {
+  width: 100%;
+  height: 100vh;
+}
 </style>
