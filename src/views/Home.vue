@@ -140,4 +140,15 @@ const handleTouchEnd = (e) => {
   user-select: none;
   pointer-events: none; */
 }
+
+@media screen and (max-width: 767px) {
+  .background-image {
+    height: 100%;
+  }
+  
+  .background-image img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
 </style>
