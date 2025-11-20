@@ -29,6 +29,9 @@ const translateY = ref(0)
 let lastDistance = 0
 let lastTouches = null
 let isPinching = false
+let isDragging = false
+let startX = 0
+let startY = 0
 
 const getDistance = (touch1, touch2) => {
   const dx = touch2.clientX - touch1.clientX
@@ -39,11 +42,16 @@ const getDistance = (touch1, touch2) => {
 const handleTouchStart = (e) => {
   if (e.touches.length === 2) {
     isPinching = true
+    isDragging = false
     lastDistance = getDistance(e.touches[0], e.touches[1])
     lastTouches = {
       x: (e.touches[0].clientX + e.touches[1].clientX) / 2,
       y: (e.touches[0].clientY + e.touches[1].clientY) / 2
     }
+  } else if (e.touches.length === 1) {
+    isDragging = true
+    startX = e.touches[0].clientX
+    startY = e.touches[0].clientY
   }
 }
 
@@ -71,6 +79,20 @@ const handleTouchMove = (e) => {
     
     lastDistance = currentDistance
     lastTouches = currentTouches
+  } else if (e.touches.length === 1 && isDragging) {
+    e.preventDefault()
+    
+    const currentX = e.touches[0].clientX
+    const currentY = e.touches[0].clientY
+    
+    const dx = currentX - startX
+    const dy = currentY - startY
+    
+    translateX.value += dx
+    translateY.value += dy
+    
+    startX = currentX
+    startY = currentY
   }
 }
 
@@ -79,6 +101,9 @@ const handleTouchEnd = (e) => {
     isPinching = false
     lastDistance = 0
     lastTouches = null
+  }
+  if (e.touches.length === 0) {
+    isDragging = false
   }
 }
 </script>
