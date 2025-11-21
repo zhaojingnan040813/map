@@ -4,6 +4,7 @@ import Recommend from '../views/Recommend.vue'
 import County from '../views/County.vue'
 import Guide from '../views/Guide.vue'
 import Route from '../views/Route.vue'
+import District from '../views/District.vue'
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: '/county',
     name: 'County',
     component: County
+  },
+  {
+    path: '/county/:district',
+    name: 'District',
+    component: District
   },
   {
     path: '/guide',

@@ -6,15 +6,35 @@
       class="tab-item"
       :class="{ active: currentPath === item.path }"
       @click="handleTabClick(item.path)"
+      :ref="item.path === '/county' ? 'countyTabEl' : null"
     >
       <div class="tab-icon" v-html="item.icon"></div>
       <div class="tab-label">{{ item.label }}</div>
+    </div>
+
+    <div v-if="isCountyPopoverOpen" class="popover-overlay" @click="closeCountyPopover"></div>
+    <div 
+      v-if="isCountyPopoverOpen" 
+      class="county-popover"
+    >
+      <ul class="county-list">
+        <li 
+          v-for="opt in countyOptions" 
+          :key="opt.key" 
+          class="county-item" 
+          :class="{ selected: selectedDistrictKey === opt.key }"
+          @click="handleCountySelect(opt)"
+        >
+          {{ opt.label }}
+        </li>
+      </ul>
+      <div class="popover-arrow"></div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 
 const router = useRouter()
@@ -68,8 +88,62 @@ const tabs = [
   }
 ]
 
+const isCountyPopoverOpen = ref(false)
+/**
+ * 打开县区气泡（固定定位至页面顶部中央）
+ */
+const openCountyPopover = () => {
+  isCountyPopoverOpen.value = true
+}
+
+/**
+ * 关闭县区气泡
+ */
+const closeCountyPopover = () => {
+  isCountyPopoverOpen.value = false
+}
+
+/**
+ * Tab 点击处理：
+ * - 非“县区”标签：按原逻辑跳转
+ * - “县区”标签：切换气泡显示
+ */
 const handleTabClick = (path) => {
-  router.push(path)
+  if (path === '/county') {
+    if (isCountyPopoverOpen.value) {
+      closeCountyPopover()
+    } else {
+      openCountyPopover()
+    }
+  } else {
+    router.push(path)
+  }
+}
+
+const countyOptions = [
+  { key: 'tunxi', label: '屯溪区' },
+  { key: 'xiuning', label: '休宁县' },
+  { key: 'huangshan', label: '黄山区' },
+  { key: 'shexian', label: '歙县' },
+  { key: 'huizhou', label: '徽州区' },
+  { key: 'yixian', label: '黟县' },
+  { key: 'qimen', label: '祁门县' }
+]
+
+/**
+ * 当前选中的区县（来自路由参数）用于高亮
+ */
+const selectedDistrictKey = computed(() => {
+  const d = route.params?.district
+  return typeof d === 'string' ? d : null
+})
+
+/**
+ * 选择县区并进行路由跳转
+ */
+const handleCountySelect = (opt) => {
+  router.push(`/county/${opt.key}`)
+  closeCountyPopover()
 }
 </script>
 
@@ -116,5 +190,69 @@ const handleTabClick = (path) => {
 
 .tab-label {
   font-size: 12px;
+}
+
+.popover-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+}
+
+.county-popover {
+  position: fixed;
+  top: 575px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  padding: 12px 12px 16px;
+  width: min(92vw, 360px);
+  z-index: 1001;
+}
+
+.county-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 12px;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.county-item {
+  background: #f7f8fa;
+  border-radius: 8px;
+  padding: 8px 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+}
+
+.county-item:active {
+  background: #e6f2ff;
+  color: #1989fa;
+}
+
+.county-item.selected {
+  background: #e6f2ff;
+  color: #1989fa;
+  font-weight: 600;
+}
+
+.popover-arrow {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #fff;
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,0.05));
 }
 </style>
