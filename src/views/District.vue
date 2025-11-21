@@ -10,6 +10,7 @@
 <script setup>
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
+import { countyMap } from '../data/counties'
 
 const route = useRoute()
 
@@ -32,7 +33,7 @@ const mapDistrictToLabel = (key) => {
 /**
  * 计算展示的中文名称
  */
-const displayName = computed(() => mapDistrictToLabel(route.params.district))
+const displayName = computed(() => countyMap[route.params.district] || '未知区县')
 </script>
 
 <style scoped>

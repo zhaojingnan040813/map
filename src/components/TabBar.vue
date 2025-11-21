@@ -36,6 +36,7 @@
 <script setup>
 import { computed, ref } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
+import { countyOptions } from '../data/counties'
 
 const router = useRouter()
 const route = useRoute()
@@ -120,15 +121,7 @@ const handleTabClick = (path) => {
   }
 }
 
-const countyOptions = [
-  { key: 'tunxi', label: '屯溪区' },
-  { key: 'xiuning', label: '休宁县' },
-  { key: 'huangshan', label: '黄山区' },
-  { key: 'shexian', label: '歙县' },
-  { key: 'huizhou', label: '徽州区' },
-  { key: 'yixian', label: '黟县' },
-  { key: 'qimen', label: '祁门县' }
-]
+
 
 /**
  * 当前选中的区县（来自路由参数）用于高亮
