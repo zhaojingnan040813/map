@@ -339,8 +339,11 @@ onUnmounted(() => {
 
 .viewer-image {
   display: block;
-  max-width: none;
+  width: 100%;
   height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: contain;
   user-select: none;
   pointer-events: none;
 }

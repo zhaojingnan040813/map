@@ -1,7 +1,7 @@
 <template>
   <div class="home-container">
     <ImageViewer 
-      image-src="../png/首页.png"
+      :image-src="homeImage"
       image-alt="首页背景"
       :enable-inertia="true"
       :border-feedback="true"
@@ -11,6 +11,7 @@
 
 <script setup>
 import ImageViewer from '../components/ImageViewer.vue'
+import homeImage from '../png/首页.png'
 </script>
 
 <style scoped>
