@@ -1,11 +1,11 @@
 <script setup>
-import TabBar from './components/TabBar.vue'
+import ImageNav from './components/ImageNav.vue'
 </script>
 
 <template>
   <div id="app">
     <router-view></router-view>
-    <TabBar />
+    <ImageNav />
   </div>
 </template>
 

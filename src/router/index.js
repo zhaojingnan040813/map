@@ -1,10 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Recommend from '../views/Recommend.vue'
-import County from '../views/County.vue'
 import Guide from '../views/Guide.vue'
 import Route from '../views/Route.vue'
-import District from '../views/District.vue'
 
 const routes = [
   {
@@ -20,16 +18,6 @@ const routes = [
     path: '/recommend',
     name: 'Recommend',
     component: Recommend
-  },
-  {
-    path: '/county',
-    name: 'County',
-    component: County
-  },
-  {
-    path: '/county/:district',
-    name: 'District',
-    component: District
   },
   {
     path: '/guide',
