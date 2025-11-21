@@ -13,6 +13,7 @@
       :src="imageSrc" 
       :alt="imageAlt"
       class="viewer-image"
+      :class="`fit-${fitMode}`"
       @load="handleImageLoad"
       draggable="false"
     />
@@ -69,6 +70,8 @@ const containerInfo = ref({
   height: 0
 })
 
+const fitMode = ref('width')
+
 const handleImageLoad = () => {
   if (!imageRef.value) return
   
@@ -79,6 +82,7 @@ const handleImageLoad = () => {
   }
   
   updateContainerInfo()
+  calculateFitMode()
 }
 
 const updateContainerInfo = () => {
@@ -87,6 +91,21 @@ const updateContainerInfo = () => {
   containerInfo.value = {
     width: containerRef.value.clientWidth,
     height: containerRef.value.clientHeight
+  }
+}
+
+const calculateFitMode = () => {
+  if (!imageInfo.value.loaded || !containerInfo.value.width || !containerInfo.value.height) {
+    return
+  }
+  
+  const imageRatio = imageInfo.value.width / imageInfo.value.height
+  const containerRatio = containerInfo.value.width / containerInfo.value.height
+  
+  if (imageRatio > containerRatio) {
+    fitMode.value = 'height'
+  } else {
+    fitMode.value = 'width'
   }
 }
 
@@ -287,6 +306,7 @@ const startInertiaScroll = () => {
 
 const handleResize = () => {
   updateContainerInfo()
+  calculateFitMode()
   
   if (containerRef.value) {
     const constrained = constrainPosition(
@@ -339,13 +359,20 @@ onUnmounted(() => {
 
 .viewer-image {
   display: block;
-  width: 100%;
-  height: auto;
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: contain;
   user-select: none;
   pointer-events: none;
+}
+
+.viewer-image.fit-width {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+}
+
+.viewer-image.fit-height {
+  width: auto;
+  height: 100%;
+  min-width: 100%;
 }
 
 .image-viewer-container::-webkit-scrollbar {
