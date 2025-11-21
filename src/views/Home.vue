@@ -111,7 +111,7 @@ const handleTouchEnd = (e) => {
 <style scoped>
 .home-container {
   width: 100%;
-  height: calc(100vh - 60px);
+  height: 100%;
   overflow: hidden;
   position: relative;
 }

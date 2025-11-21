@@ -13,7 +13,7 @@
 <style scoped>
 .page-container {
   width: 100%;
-  height: calc(100vh - 60px);
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;

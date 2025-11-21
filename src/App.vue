@@ -3,15 +3,17 @@ import ImageNav from './components/ImageNav.vue'
 </script>
 
 <template>
-  <div id="app">
+  <div class="app-wrapper">
     <router-view></router-view>
     <ImageNav />
   </div>
 </template>
 
 <style scoped>
-#app {
+.app-wrapper {
   width: 100%;
   height: 100vh;
+  background-color: #dfdcb8;
+  overflow: hidden;
 }
 </style>
