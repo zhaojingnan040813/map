@@ -13,7 +13,11 @@
       :src="imageSrc" 
       :alt="imageAlt"
       class="viewer-image"
-      :class="`fit-${fitMode}`"
+      :class="[`fit-${fitMode}`, { pinching: isPinching }]"
+      :style="{
+        transform: `scale(${scale}) translate(${translateX}px, ${translateY}px)`,
+        transformOrigin: 'center center'
+      }"
       @load="handleImageLoad"
       draggable="false"
     />
@@ -71,6 +75,14 @@ const containerInfo = ref({
 })
 
 const fitMode = ref('width')
+const scale = ref(1)
+const translateX = ref(0)
+const translateY = ref(0)
+
+let isPinching = false
+let lastDistance = 0
+let lastPinchCenter = { x: 0, y: 0 }
+let lastTapTime = 0
 
 const handleImageLoad = () => {
   if (!imageRef.value) return
@@ -164,21 +176,70 @@ const setScrollPosition = (x, y) => {
   currentY = constrained.y
 }
 
+const getDistance = (touch1, touch2) => {
+  const dx = touch2.clientX - touch1.clientX
+  const dy = touch2.clientY - touch1.clientY
+  return Math.sqrt(dx * dx + dy * dy)
+}
+
+const getPinchCenter = (touch1, touch2) => {
+  return {
+    x: (touch1.clientX + touch2.clientX) / 2,
+    y: (touch1.clientY + touch2.clientY) / 2
+  }
+}
+
+const handleDoubleTap = (e) => {
+  const currentTime = Date.now()
+  const tapGap = currentTime - lastTapTime
+  
+  if (tapGap < 300 && tapGap > 0) {
+    const touch = e.touches[0]
+    const rect = containerRef.value.getBoundingClientRect()
+    const centerX = touch.clientX - rect.left
+    const centerY = touch.clientY - rect.top
+    
+    if (scale.value > 1) {
+      scale.value = 1
+      translateX.value = 0
+      translateY.value = 0
+    } else {
+      scale.value = 2
+      const offsetX = (centerX - rect.width / 2) * (scale.value - 1)
+      const offsetY = (centerY - rect.height / 2) * (scale.value - 1)
+      translateX.value = -offsetX
+      translateY.value = -offsetY
+    }
+  }
+  
+  lastTapTime = currentTime
+}
+
 const handleTouchStart = (e) => {
   if (!imageInfo.value.loaded) return
   
-  isDragging = true
-  
-  const touch = e.touches[0]
-  startX = touch.clientX + containerRef.value.scrollLeft
-  startY = touch.clientY + containerRef.value.scrollTop
-  
-  lastMoveX = touch.clientX
-  lastMoveY = touch.clientY
-  lastMoveTime = Date.now()
-  
-  velocityX = 0
-  velocityY = 0
+  if (e.touches.length === 2) {
+    isPinching = true
+    isDragging = false
+    lastDistance = getDistance(e.touches[0], e.touches[1])
+    lastPinchCenter = getPinchCenter(e.touches[0], e.touches[1])
+  } else if (e.touches.length === 1) {
+    if (!isPinching) {
+      handleDoubleTap(e)
+      isDragging = true
+      
+      const touch = e.touches[0]
+      startX = touch.clientX + containerRef.value.scrollLeft
+      startY = touch.clientY + containerRef.value.scrollTop
+      
+      lastMoveX = touch.clientX
+      lastMoveY = touch.clientY
+      lastMoveTime = Date.now()
+      
+      velocityX = 0
+      velocityY = 0
+    }
+  }
   
   if (animationId) {
     cancelAnimationFrame(animationId)
@@ -187,36 +248,69 @@ const handleTouchStart = (e) => {
 }
 
 const handleTouchMove = (e) => {
-  if (!isDragging || !imageInfo.value.loaded) return
+  if (!imageInfo.value.loaded) return
   
   e.preventDefault()
   
-  const touch = e.touches[0]
-  const currentTime = Date.now()
-  const deltaTime = currentTime - lastMoveTime
-  
-  if (deltaTime > 0) {
-    velocityX = (touch.clientX - lastMoveX) / deltaTime
-    velocityY = (touch.clientY - lastMoveY) / deltaTime
+  if (e.touches.length === 2 && isPinching) {
+    const currentDistance = getDistance(e.touches[0], e.touches[1])
+    const currentCenter = getPinchCenter(e.touches[0], e.touches[1])
+    
+    if (lastDistance > 0) {
+      const scaleChange = currentDistance / lastDistance
+      let newScale = scale.value * scaleChange
+      
+      newScale = Math.max(1, Math.min(3, newScale))
+      
+      const rect = containerRef.value.getBoundingClientRect()
+      const centerX = currentCenter.x - rect.left
+      const centerY = currentCenter.y - rect.top
+      
+      const scaleRatio = newScale / scale.value
+      
+      translateX.value = centerX - (centerX - translateX.value) * scaleRatio
+      translateY.value = centerY - (centerY - translateY.value) * scaleRatio
+      
+      scale.value = newScale
+    }
+    
+    lastDistance = currentDistance
+    lastPinchCenter = currentCenter
+  } else if (e.touches.length === 1 && isDragging) {
+    const touch = e.touches[0]
+    const currentTime = Date.now()
+    const deltaTime = currentTime - lastMoveTime
+    
+    if (deltaTime > 0) {
+      velocityX = (touch.clientX - lastMoveX) / deltaTime
+      velocityY = (touch.clientY - lastMoveY) / deltaTime
+    }
+    
+    const newX = startX - touch.clientX
+    const newY = startY - touch.clientY
+    
+    setScrollPosition(newX, newY)
+    
+    lastMoveX = touch.clientX
+    lastMoveY = touch.clientY
+    lastMoveTime = currentTime
   }
-  
-  const newX = startX - touch.clientX
-  const newY = startY - touch.clientY
-  
-  setScrollPosition(newX, newY)
-  
-  lastMoveX = touch.clientX
-  lastMoveY = touch.clientY
-  lastMoveTime = currentTime
 }
 
-const handleTouchEnd = () => {
-  if (!isDragging) return
+const handleTouchEnd = (e) => {
+  if (e.touches.length < 2) {
+    isPinching = false
+    lastDistance = 0
+  }
   
-  isDragging = false
-  
-  if (props.enableInertia && (Math.abs(velocityX) > 0.1 || Math.abs(velocityY) > 0.1)) {
-    startInertiaScroll()
+  if (e.touches.length === 0) {
+    if (isDragging) {
+      isDragging = false
+      
+      if (props.enableInertia && (Math.abs(velocityX) > 0.1 || Math.abs(velocityY) > 0.1)) {
+        startInertiaScroll()
+      }
+    }
   }
 }
 
@@ -361,6 +455,12 @@ onUnmounted(() => {
   display: block;
   user-select: none;
   pointer-events: none;
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+}
+
+.viewer-image.pinching {
+  transition: none;
 }
 
 .viewer-image.fit-width {
