@@ -16,6 +16,7 @@
     <div 
       v-if="isCountyPopoverOpen" 
       class="county-popover"
+      :style="popoverStyle"
     >
       <ul class="county-list">
         <li 
@@ -34,12 +35,21 @@
 </template>
 
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, ref, onMounted, onUnmounted, nextTick } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { countyOptions } from '../data/counties'
 
 const router = useRouter()
 const route = useRoute()
+
+/**
+ * 气泡的动态样式（fixed 定位）
+ */
+const popoverStyle = ref({
+  bottom: '70px',
+  left: '50%',
+  transform: 'translateX(-50%)'
+})
 
 const currentPath = computed(() => route.path)
 
@@ -91,10 +101,13 @@ const tabs = [
 
 const isCountyPopoverOpen = ref(false)
 /**
- * 打开县区气泡（固定定位至页面顶部中央）
+ * 打开县区气泡（动态定位至“县区”标签上方）
  */
 const openCountyPopover = () => {
   isCountyPopoverOpen.value = true
+  nextTick(() => {
+    updatePopoverPosition()
+  })
 }
 
 /**
@@ -103,6 +116,50 @@ const openCountyPopover = () => {
 const closeCountyPopover = () => {
   isCountyPopoverOpen.value = false
 }
+
+/**
+ * 查找“县区”标签的元素
+ */
+const findCountyTabEl = () => {
+  const els = document.querySelectorAll('.tab-bar .tab-item')
+  for (const el of els) {
+    const labelEl = el.querySelector('.tab-label')
+    if (labelEl && labelEl.textContent.trim() === '县区') {
+      return el
+    }
+  }
+  return null
+}
+
+/**
+ * 根据“县区”标签位置，更新气泡的水平居中与底部间距
+ */
+const updatePopoverPosition = () => {
+  if (!isCountyPopoverOpen.value) return
+  const el = findCountyTabEl()
+  if (!el) return
+  const rect = el.getBoundingClientRect()
+  const centerX = rect.left + rect.width / 2
+  popoverStyle.value = {
+    bottom: '70px',
+    left: `${centerX}px`,
+    transform: 'translateX(-50%)'
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('resize', updatePopoverPosition)
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener('resize', updatePopoverPosition)
+  }
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', updatePopoverPosition)
+  if (window.visualViewport) {
+    window.visualViewport.removeEventListener('resize', updatePopoverPosition)
+  }
+})
 
 /**
  * Tab 点击处理：
@@ -194,9 +251,6 @@ const handleCountySelect = (opt) => {
 
 .county-popover {
   position: fixed;
-  top: 575px;
-  left: 50%;
-  transform: translateX(-50%);
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
