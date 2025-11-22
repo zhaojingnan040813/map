@@ -4,6 +4,7 @@ import Recommend from '../views/Recommend.vue'
 import Guide from '../views/Guide.vue'
 import Route from '../views/Route.vue'
 import RouteDetail from '../views/RouteDetail.vue'
+import RecommendDetail from '../views/RecommendDetail.vue'
 
 const routes = [
   {
@@ -34,6 +35,11 @@ const routes = [
     path: '/route/:id',
     name: 'RouteDetail',
     component: RouteDetail
+  },
+  {
+    path: '/recommend/:id',
+    name: 'RecommendDetail',
+    component: RecommendDetail
   }
 ]
 
