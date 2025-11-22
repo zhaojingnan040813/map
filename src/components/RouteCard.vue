@@ -141,7 +141,7 @@ defineProps({
   bottom: 24px;
   right: 24px;
   padding: 10px 24px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #c3bb9c 0%, #929089 100%);
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -153,9 +153,9 @@ defineProps({
 }
 
 .learn-more-btn:hover {
-  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  background: linear-gradient(135deg, #929089 0%, #c3bb9c 100%);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 4px 12px rgba(146, 144, 137, 0.4);
 }
 
 .learn-more-btn:active {
