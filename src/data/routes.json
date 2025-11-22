@@ -8,7 +8,36 @@
             "address": "安徽省黄山市屯溪区老街",
             "contact": "0559-5559999",
             "extra1": "3天2晚",
-            "extra2": "¥2999起"
+            "extra2": "¥2999起",
+            "details": [
+                {
+                    "day": 1,
+                    "title": "云谷入山·迎客松·光明顶",
+                    "morning": "抵达黄山，乘云谷索道上山，游迎客松、北海景区",
+                    "afternoon": "经石林、飞来石至光明顶，远眺群峰",
+                    "evening": "入住山顶酒店，温泉放松或观星",
+                    "summary": "轻松入山，熟悉黄山主景区，夜宿山顶方便次日看日出",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                },
+                {
+                    "day": 2,
+                    "title": "光明顶日出·西海大峡谷",
+                    "morning": "早起光明顶或丹霞峰拍日出，赏云海",
+                    "afternoon": "徒步西海大峡谷一二环，体验奇松怪石",
+                    "evening": "返回北海或排云亭赏晚霞，山顶休息",
+                    "summary": "黄山精华线路，强度中等，风景指数★★★★★",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                },
+                {
+                    "day": 3,
+                    "title": "下山·屯溪老街漫步",
+                    "morning": "经始信峰下山，乘索道下行",
+                    "afternoon": "前往屯溪老街，品徽菜，购伴手礼",
+                    "evening": "根据航班/高铁返程",
+                    "summary": "收官轻松，体验徽州城市风貌",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                }
+            ]
         },
         {
             "id": 2,
@@ -18,7 +47,45 @@
             "address": "安徽省黄山市歙县徽州古城",
             "contact": "0559-6688888",
             "extra1": "4天3晚",
-            "extra2": "¥3599起"
+            "extra2": "¥3599起",
+            "details": [
+                {
+                    "day": 1,
+                    "title": "古城初识·文化浸润",
+                    "morning": "到达歙县徽州古城，参观许国石坊、徽州府衙",
+                    "afternoon": "走访古街巷，体验书画馆与传统作坊",
+                    "evening": "入住古城客栈，静心茶道",
+                    "summary": "初识徽州文脉，缓步适应行程",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                },
+                {
+                    "day": 2,
+                    "title": "西递·宏村水墨行",
+                    "morning": "驱车西递，游牌坊群、古民居",
+                    "afternoon": "前往宏村月沼、南湖，打卡经典机位",
+                    "evening": "徽艺体验或古村夜游",
+                    "summary": "徽派建筑与水系村落的双重体验",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                },
+                {
+                    "day": 3,
+                    "title": "身心疗愈·温泉中医",
+                    "morning": "中医理疗与八段锦/太极基础课程",
+                    "afternoon": "温泉理疗或芳香疗法舒压",
+                    "evening": "清淡养生餐，早睡改善睡眠",
+                    "summary": "身心放松，恢复活力",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                },
+                {
+                    "day": 4,
+                    "title": "传统手作·返程",
+                    "morning": "体验徽墨/歙砚制作，了解工艺流程",
+                    "afternoon": "老街自由活动，采买伴手礼",
+                    "evening": "根据行程返程",
+                    "summary": "文化与疗养收官，满意返程",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                }
+            ]
         },
         {
             "id": 3,
@@ -28,7 +95,36 @@
             "address": "安徽省黄山市徽州区",
             "contact": "0559-3556666",
             "extra1": "3天2晚",
-            "extra2": "¥2799起"
+            "extra2": "¥2799起",
+            "details": [
+                {
+                    "day": 1,
+                    "title": "徽州古城·牌坊文化",
+                    "morning": "徽州古城文化讲解，参观代表性古建",
+                    "afternoon": "棠樾牌坊群与名人故居",
+                    "evening": "观赏徽剧或小型曲艺",
+                    "summary": "理解礼孝文化与徽派美学",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                },
+                {
+                    "day": 2,
+                    "title": "园林与书院·品茶交流",
+                    "morning": "鲍家花园与私家园林参观",
+                    "afternoon": "书院/博物馆研学，徽商史讲述",
+                    "evening": "黄山毛峰品鉴与交流",
+                    "summary": "人文与茶文化融合",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                },
+                {
+                    "day": 3,
+                    "title": "非遗手作·徽菜课堂",
+                    "morning": "徽墨歙砚非遗工坊体验",
+                    "afternoon": "徽菜烹饪课与地道午餐",
+                    "evening": "整理行囊返程",
+                    "summary": "动手实践，文化之旅圆满结束",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                }
+            ]
         },
         {
             "id": 4,
@@ -38,7 +134,54 @@
             "address": "安徽省黄山市屯溪区新安江畔",
             "contact": "0559-2227777",
             "extra1": "5天4晚",
-            "extra2": "¥4299起"
+            "extra2": "¥4299起",
+            "details": [
+                {
+                    "day": 1,
+                    "title": "抵达与评估·轻松适应",
+                    "morning": "抵达新安江畔度假酒店，办理入住",
+                    "afternoon": "基础体检与医生问诊，制定个性化方案",
+                    "evening": "轻食晚餐与冥想放松",
+                    "summary": "建立健康档案，合理规划后续行程",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                },
+                {
+                    "day": 2,
+                    "title": "温泉水疗·中医理疗",
+                    "morning": "温泉水疗与矿泉浴舒缓肌肉",
+                    "afternoon": "针灸/推拿或拔罐，筋膜放松",
+                    "evening": "瑜伽呼吸与早睡",
+                    "summary": "身心舒缓，提升睡眠质量",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                },
+                {
+                    "day": 3,
+                    "title": "有机农场·森林步道",
+                    "morning": "走访有机农场，时令采摘",
+                    "afternoon": "森林步道舒缓徒步，亲近自然",
+                    "evening": "营养讲座与健康交流",
+                    "summary": "补充维生素，增强体能",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                },
+                {
+                    "day": 4,
+                    "title": "功法练习·户外轻运动",
+                    "morning": "太极/八段锦基础功法练习",
+                    "afternoon": "新安江轻户外（桨板/骑行择一）",
+                    "evening": "芳疗与睡眠引导",
+                    "summary": "恢复体能与身心平衡",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                },
+                {
+                    "day": 5,
+                    "title": "复诊评估·返程",
+                    "morning": "复诊与健康评估，获得建议",
+                    "afternoon": "新安江画廊轻游，收官合影",
+                    "evening": "返程",
+                    "summary": "疗养闭环，带走健康生活方式",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                }
+            ]
         },
         {
             "id": 5,
@@ -48,7 +191,27 @@
             "address": "安徽省黄山市休宁县齐云山",
             "contact": "0559-7777888",
             "extra1": "2天1晚",
-            "extra2": "¥1899起"
+            "extra2": "¥1899起",
+            "details": [
+                {
+                    "day": 1,
+                    "title": "登山祈福·入道体验",
+                    "morning": "抵达齐云山，登山至万寿堂等核心景点",
+                    "afternoon": "观摩道教仪式，听讲道家文化",
+                    "evening": "斋菜品鉴与道家功法练习",
+                    "summary": "清静入山，感受道教修行氛围",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                },
+                {
+                    "day": 2,
+                    "title": "云岩湖环线·返程",
+                    "morning": "云岩湖环线漫步或轻徒步",
+                    "afternoon": "下山至休宁县城，参访文昌阁等",
+                    "evening": "返程",
+                    "summary": "心境澄明，带着祝福返程",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                }
+            ]
         },
         {
             "id": 6,
@@ -58,7 +221,36 @@
             "address": "安徽省黄山市黄山区太平湖",
             "contact": "0559-8885555",
             "extra1": "3天2晚",
-            "extra2": "¥2599起"
+            "extra2": "¥2599起",
+            "details": [
+                {
+                    "day": 1,
+                    "title": "湖区入住·轻松度假",
+                    "morning": "抵达太平湖，办理酒店入住",
+                    "afternoon": "乘船观光，欣赏湖光山色",
+                    "evening": "湖畔烧烤或静夜垂钓",
+                    "summary": "状态切换，进入度假模式",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                },
+                {
+                    "day": 2,
+                    "title": "生态探索·湖鲜品鉴",
+                    "morning": "皮划艇/桨板体验，亲近湖面",
+                    "afternoon": "湿地步道观鸟，认识湖区生态",
+                    "evening": "湖鲜品鉴晚餐",
+                    "summary": "生态与美食的双重享受",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                },
+                {
+                    "day": 3,
+                    "title": "休闲慢生活·返程",
+                    "morning": "森林晨跑或湖畔散步",
+                    "afternoon": "咖啡馆发呆或自由拍照",
+                    "evening": "返程",
+                    "summary": "心情松弛，愉快收官",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                }
+            ]
         },
         {
             "id": 7,
@@ -68,7 +260,45 @@
             "address": "安徽省黄山市黟县宏村",
             "contact": "0559-5553333",
             "extra1": "4天3晚",
-            "extra2": "¥3199起"
+            "extra2": "¥3199起",
+            "details": [
+                {
+                    "day": 1,
+                    "title": "宏村入村·水墨人家",
+                    "morning": "到达宏村，游月沼与南湖",
+                    "afternoon": "民宿入住，村落导览与拍照",
+                    "evening": "徽戏小剧场或篝火晚会",
+                    "summary": "走进水墨宏村，初识古村生活",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                },
+                {
+                    "day": 2,
+                    "title": "西递·南屏·古村群落",
+                    "morning": "西递古村探索，识徽派细节",
+                    "afternoon": "南屏电影取景地巡礼",
+                    "evening": "徽雕体验或村民互动",
+                    "summary": "多村联动，体验差异风貌",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                },
+                {
+                    "day": 3,
+                    "title": "手艺课堂·乡宴",
+                    "morning": "木雕/砖雕/石雕体验课",
+                    "afternoon": "摄影课堂与作品交流",
+                    "evening": "农家宴与乡村夜话",
+                    "summary": "沉浸式参与，人与村落共鸣",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                },
+                {
+                    "day": 4,
+                    "title": "山野徒步·返程",
+                    "morning": "塔川或卢村徒步线路",
+                    "afternoon": "集市采买土特产",
+                    "evening": "返程",
+                    "summary": "自然与人文交织的收官",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                }
+            ]
         },
         {
             "id": 8,
@@ -78,7 +308,27 @@
             "address": "安徽省黄山市屯溪区花山谜窟",
             "contact": "0559-2228888",
             "extra1": "2天1晚",
-            "extra2": "¥1699起"
+            "extra2": "¥1699起",
+            "details": [
+                {
+                    "day": 1,
+                    "title": "谜窟探秘·江上夜游",
+                    "morning": "乘船至花山谜窟，初探洞群",
+                    "afternoon": "讲解员带队深入洞窟与石刻",
+                    "evening": "新安江夜游，江畔散步",
+                    "summary": "千古之谜与江景夜色",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                },
+                {
+                    "day": 2,
+                    "title": "山水画廊·渔家美食",
+                    "morning": "新安江山水画廊漂流",
+                    "afternoon": "渔家菜午餐与自由活动",
+                    "evening": "返程",
+                    "summary": "江南水乡风情尽览",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                }
+            ]
         },
         {
             "id": 9,
@@ -88,7 +338,54 @@
             "address": "安徽省黄山市黄山风景区",
             "contact": "0559-5558888",
             "extra1": "5天4晚",
-            "extra2": "¥4999起"
+            "extra2": "¥4999起",
+            "details": [
+                {
+                    "day": 1,
+                    "title": "入山采风·器材设置",
+                    "morning": "云谷索道上山，踩点光明顶与飞来石",
+                    "afternoon": "器材设置与构图讲解",
+                    "evening": "星轨拍摄训练与夜景试拍",
+                    "summary": "摄影适应与技法热身",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                },
+                {
+                    "day": 2,
+                    "title": "日出云海·峡谷光影",
+                    "morning": "光明顶日出拍摄，云海机位切换",
+                    "afternoon": "西海大峡谷逆光与层次练习",
+                    "evening": "晚霞与夜景收尾",
+                    "summary": "光影捕捉，强化现场判断",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                },
+                {
+                    "day": 3,
+                    "title": "奇松主题·作品点评",
+                    "morning": "始信峰奇松专题拍摄",
+                    "afternoon": "黄山松特写与线条构成",
+                    "evening": "作品点评交流",
+                    "summary": "主题拍摄与审美提升",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                },
+                {
+                    "day": 4,
+                    "title": "石峰特写·长曝光",
+                    "morning": "西海石峰特写训练",
+                    "afternoon": "飞来石与鳌鱼峰机位",
+                    "evening": "夜景长曝光与实战",
+                    "summary": "技法提升，稳定输出",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                },
+                {
+                    "day": 5,
+                    "title": "老街街拍·后期要点",
+                    "morning": "屯溪老街人文街拍",
+                    "afternoon": "后期课程要点与导出",
+                    "evening": "返程",
+                    "summary": "拍摄闭环，作品整理",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                }
+            ]
         },
         {
             "id": 10,
@@ -98,7 +395,36 @@
             "address": "安徽省黄山市各县区",
             "contact": "0559-6669999",
             "extra1": "3天2晚",
-            "extra2": "¥2399起"
+            "extra2": "¥2399起",
+            "details": [
+                {
+                    "day": 1,
+                    "title": "徽菜初识·地道风味",
+                    "morning": "参观徽菜博物馆，了解菜系渊源",
+                    "afternoon": "品尝徽州八大碗与地道午餐",
+                    "evening": "臭鳜鱼特色晚餐",
+                    "summary": "舌尖徽州开篇",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                },
+                {
+                    "day": 2,
+                    "title": "烹饪课堂·茶香满屋",
+                    "morning": "毛豆腐制作体验",
+                    "afternoon": "烹饪课学习徽菜经典做法",
+                    "evening": "黄山毛峰茶会与交流",
+                    "summary": "做与品的双重乐趣",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                },
+                {
+                    "day": 3,
+                    "title": "探店打卡·红茶品鉴",
+                    "morning": "当地名店打卡与美食探店",
+                    "afternoon": "祁门红茶品鉴",
+                    "evening": "返程",
+                    "summary": "满载而归，味蕾之旅圆满",
+                    "imageUrl": "https://img1.baidu.com/it/u=3036629874,2562002369&fm=253&app=138&f=JPEG?w=800&h=1422"
+                }
+            ]
         }
     ]
 }
