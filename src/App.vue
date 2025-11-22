@@ -14,6 +14,6 @@ import ImageNav from './components/ImageNav.vue'
   width: 100%;
   height: 100vh;
   background-color: #dfdcb8;
-  overflow: hidden;
+  overflow-y: auto;
 }
 </style>
