@@ -16,13 +16,19 @@
           <span class="info-text">{{ contact }}</span>
         </div>
       </div>
-      <button class="learn-more-btn">了解更多</button>
+      <button class="learn-more-btn" @click="goToDetail">了解更多</button>
     </div>
   </div>
 </template>
 
 <script setup>
-defineProps({
+import { useRouter } from 'vue-router'
+
+const props = defineProps({
+  id: {
+    type: Number,
+    required: true
+  },
   imageUrl: {
     type: String,
     required: true
@@ -44,6 +50,12 @@ defineProps({
     required: true
   }
 })
+
+const router = useRouter()
+
+const goToDetail = () => {
+  router.push({ name: 'RouteDetail', params: { id: props.id } })
+}
 </script>
 
 <style scoped>

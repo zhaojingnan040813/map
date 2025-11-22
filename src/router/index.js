@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import Recommend from '../views/Recommend.vue'
 import Guide from '../views/Guide.vue'
 import Route from '../views/Route.vue'
+import RouteDetail from '../views/RouteDetail.vue'
 
 const routes = [
   {
@@ -28,6 +29,11 @@ const routes = [
     path: '/route',
     name: 'Route',
     component: Route
+  },
+  {
+    path: '/route/:id',
+    name: 'RouteDetail',
+    component: RouteDetail
   }
 ]
 
