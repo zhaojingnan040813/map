@@ -72,7 +72,7 @@ const formattedIntroduction = computed(() => {
 })
 
 const goBack = () => {
-  router.back()
+  router.push({ name: 'Recommend' })
 }
 </script>
 
