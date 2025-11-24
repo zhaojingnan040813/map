@@ -5,7 +5,8 @@ import Guide from '../views/Guide.vue'
 import Route from '../views/Route.vue'
 import RouteDetail from '../views/RouteDetail.vue'
 import RecommendDetail from '../views/RecommendDetail.vue'
-import CoordinatePickerPage from '../views/CoordinatePickerPage.vue'
+import Qimen from '../views/Qimen.vue'
+import Yixian from '../views/Yixian.vue'
 
 const routes = [
   {
@@ -43,9 +44,14 @@ const routes = [
     component: RecommendDetail
   },
   {
-    path: '/picker',
-    name: 'CoordinatePicker',
-    component: CoordinatePickerPage
+    path: '/qimen',
+    name: 'Qimen',
+    component: Qimen
+  },
+  {
+    path: '/yixian',
+    name: 'Yixian',
+    component: Yixian
   }
 ]
 
