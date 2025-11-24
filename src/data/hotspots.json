@@ -1,21 +1,25 @@
 {
+    "imageSize": {
+        "width": 6850,
+        "height": 5000
+    },
     "homeHotspots": [
         {
             "id": "qimen",
             "name": "祁门县",
-            "left": "27.77%",
-            "top": "53.43%",
-            "width": "5.04%",
-            "height": "10.79%",
+            "x": 1752,
+            "y": 2548,
+            "width": 708,
+            "height": 781,
             "route": "/qimen"
         },
         {
             "id": "yixian",
             "name": "黟县",
-            "left": "39.69%",
-            "top": "51.64%",
-            "width": "3.04%",
-            "height": "7.19%",
+            "x": 2581,
+            "y": 2342,
+            "width": 423,
+            "height": 781,
             "route": "/yixian"
         }
     ]

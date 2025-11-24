@@ -27,6 +27,8 @@
 <script setup>
 import { ref, onMounted, onUnmounted, watch } from 'vue'
 
+const emit = defineEmits(['transform-change'])
+
 const props = defineProps({
   imageSrc: {
     type: String,
@@ -95,6 +97,7 @@ const handleImageLoad = () => {
   
   updateContainerInfo()
   calculateFitMode()
+  setTimeout(() => emitTransformChange(), 0)
 }
 
 const updateContainerInfo = () => {
@@ -119,6 +122,25 @@ const calculateFitMode = () => {
   } else {
     fitMode.value = 'width'
   }
+}
+
+const emitTransformChange = () => {
+  if (!imageRef.value || !containerRef.value || !imageInfo.value.loaded) {
+    return
+  }
+  
+  const rect = imageRef.value.getBoundingClientRect()
+  const containerRect = containerRef.value.getBoundingClientRect()
+  
+  emit('transform-change', {
+    scale: scale.value,
+    translateX: translateX.value,
+    translateY: translateY.value,
+    displayWidth: rect.width / scale.value,
+    displayHeight: rect.height / scale.value,
+    offsetLeft: rect.left - containerRect.left,
+    offsetTop: rect.top - containerRect.top
+  })
 }
 
 const getBoundaries = () => {
@@ -210,6 +232,7 @@ const handleDoubleTap = (e) => {
       translateX.value = -offsetX
       translateY.value = -offsetY
     }
+    setTimeout(() => emitTransformChange(), 0)
   }
   
   lastTapTime = currentTime
@@ -272,6 +295,7 @@ const handleTouchMove = (e) => {
       translateY.value = centerY - (centerY - translateY.value) * scaleRatio
       
       scale.value = newScale
+      emitTransformChange()
     }
     
     lastDistance = currentDistance
@@ -409,17 +433,31 @@ const handleResize = () => {
     )
     setScrollPosition(constrained.x, constrained.y)
   }
+  
+  setTimeout(() => emitTransformChange(), 0)
+}
+
+const handleScroll = () => {
+  emitTransformChange()
 }
 
 onMounted(() => {
   updateContainerInfo()
   window.addEventListener('resize', handleResize)
   window.addEventListener('orientationchange', handleResize)
+  
+  if (containerRef.value) {
+    containerRef.value.addEventListener('scroll', handleScroll)
+  }
 })
 
 onUnmounted(() => {
   window.removeEventListener('resize', handleResize)
   window.removeEventListener('orientationchange', handleResize)
+  
+  if (containerRef.value) {
+    containerRef.value.removeEventListener('scroll', handleScroll)
+  }
   
   if (animationId) {
     cancelAnimationFrame(animationId)
