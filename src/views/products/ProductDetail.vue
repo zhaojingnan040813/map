@@ -16,38 +16,9 @@
         </div>
 
         <div class="info-section">
-          <div class="price-box">
-            <span class="price-label">参考价格：</span>
-            <span class="price-value">{{ product.price }}</span>
-          </div>
-
           <div class="info-card">
             <h2 class="section-title">产品介绍</h2>
-            <p class="description-text">{{ product.description }}</p>
-          </div>
-
-          <div class="info-card">
-            <h2 class="section-title">产品特色</h2>
-            <ul class="features-list">
-              <li v-for="(feature, index) in product.features" :key="index">
-                <span class="feature-icon">✓</span>
-                {{ feature }}
-              </li>
-            </ul>
-          </div>
-
-          <div class="info-card">
-            <h2 class="section-title">产品规格</h2>
-            <div class="specs-grid">
-              <div 
-                v-for="(value, key) in product.specifications" 
-                :key="key"
-                class="spec-item"
-              >
-                <span class="spec-label">{{ key }}：</span>
-                <span class="spec-value">{{ value }}</span>
-              </div>
-            </div>
+            <p class="description-text">{{ product.details.description }}</p>
           </div>
 
           <div class="info-card contact-card">
@@ -55,11 +26,11 @@
             <div class="contact-info">
               <div class="contact-item">
                 <span class="contact-icon">📞</span>
-                <span class="contact-text">{{ product.contact }}</span>
+                <span class="contact-text">{{ product.details.contact }}</span>
               </div>
               <div class="contact-item">
                 <span class="contact-icon">📍</span>
-                <span class="contact-text">{{ product.address }}</span>
+                <span class="contact-text">{{ product.details.address }}</span>
               </div>
             </div>
           </div>
@@ -188,25 +159,6 @@ const goBack = () => {
   gap: 20px;
 }
 
-.price-box {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 20px 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-}
-
-.price-label {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 16px;
-  margin-right: 10px;
-}
-
-.price-value {
-  color: #fff;
-  font-size: 32px;
-  font-weight: bold;
-}
-
 .info-card {
   background: rgba(255, 255, 255, 0.95);
   padding: 25px;
@@ -228,58 +180,6 @@ const goBack = () => {
   line-height: 1.8;
   color: #555;
   margin: 0;
-}
-
-.features-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.features-list li {
-  font-size: 16px;
-  line-height: 2;
-  color: #555;
-  padding: 8px 0;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.features-list li:last-child {
-  border-bottom: none;
-}
-
-.feature-icon {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  background: #667eea;
-  color: #fff;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 24px;
-  margin-right: 10px;
-  font-size: 14px;
-}
-
-.specs-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-}
-
-.spec-item {
-  padding: 12px;
-  background: #f8f9fa;
-  border-radius: 8px;
-}
-
-.spec-label {
-  font-weight: bold;
-  color: #333;
-}
-
-.spec-value {
-  color: #666;
 }
 
 .contact-card {
@@ -347,13 +247,6 @@ const goBack = () => {
     font-size: 20px;
   }
 
-  .price-value {
-    font-size: 28px;
-  }
-
-  .specs-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 480px) {
@@ -368,14 +261,6 @@ const goBack = () => {
   .back-button {
     padding: 8px 16px;
     font-size: 14px;
-  }
-
-  .price-box {
-    padding: 15px 20px;
-  }
-
-  .price-value {
-    font-size: 24px;
   }
 
   .info-card {
