@@ -127,8 +127,8 @@ const handleProductClick = (product) => {
   width: 100%;
   min-height: 100vh;
   background-image: url('../../png/chanpin/产品背景.png');
-  background-size: 100% 100%;
-  background-position: top center;
+  background-size: cover;
+  background-position: bottom center;
   background-repeat: no-repeat;
   padding: 40px 20px 80px;
   box-sizing: border-box;
