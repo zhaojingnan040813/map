@@ -3,7 +3,7 @@
     <div v-if="product" class="detail-container">
       <div class="detail-header">
         <button class="back-button" @click="goBack">
-          ← 返回
+          <img src="../../assets/back.svg" alt="返回" class="back-icon" />
         </button>
         <h1 class="product-title">{{ product.name }}</h1>
       </div>
@@ -72,29 +72,18 @@ const goBack = () => {
   width: 100%;
   min-height: 100vh;
   background-image: url('../../png/chanpin/产品背景.png');
-  background-size: 100% 100%;
-  background-position: top center;
+  background-size: cover;
+  background-position: bottom center;
   background-repeat: no-repeat;
   padding: 20px;
   box-sizing: border-box;
-}
-
-.product-detail-page::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 1;
 }
 
 .detail-container {
   position: relative;
   z-index: 2;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 30px 30px;
   padding-bottom: 80px;
 }
 
@@ -103,20 +92,25 @@ const goBack = () => {
 }
 
 .back-button {
-  background: rgba(255, 255, 255, 0.9);
+  background: transparent;
   border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-size: 16px;
+  padding: 0;
   cursor: pointer;
   margin-bottom: 20px;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .back-button:hover {
-  background: #fff;
   transform: translateX(-5px);
+}
+
+.back-icon {
+  width: 48px;
+  height: 48px;
+  display: block;
 }
 
 .product-title {
@@ -258,9 +252,9 @@ const goBack = () => {
     font-size: 28px;
   }
 
-  .back-button {
-    padding: 8px 16px;
-    font-size: 14px;
+  .back-icon {
+    width: 40px;
+    height: 40px;
   }
 
   .info-card {
