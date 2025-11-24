@@ -125,7 +125,7 @@ const handleProductClick = (product) => {
 <style scoped>
 .product-page {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   background-image: url('../../png/chanpin/产品背景.png');
   background-size: cover;
   background-position: bottom center;
@@ -133,6 +133,7 @@ const handleProductClick = (product) => {
   padding: 40px 20px 80px;
   box-sizing: border-box;
   position: relative;
+  overflow: hidden;
 }
 
 .product-container {
@@ -145,17 +146,16 @@ const handleProductClick = (product) => {
 .page-title {
   font-size: 36px;
   font-weight: bold;
-  color: #fff;
+  color: #675529;
   text-align: center;
   margin-bottom: 40px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
-  margin-bottom: 40px;
+  margin-bottom: 15px;
 }
 
 .product-card {
@@ -276,7 +276,7 @@ const handleProductClick = (product) => {
 }
 
 .pagination-page.active {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #675529 0%, #4a3d1f 100%);
   color: #fff;
   font-weight: bold;
 }
