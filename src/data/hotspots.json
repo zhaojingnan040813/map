@@ -21,6 +21,51 @@
             "width": 423,
             "height": 781,
             "route": "/yixian"
+        },
+        {
+            "id": "huangshan",
+            "name": "黄山区",
+            "x": 2980,
+            "y": 1737,
+            "width": 442,
+            "height": 539,
+            "route": "/huangshan"
+        },
+        {
+            "id": "huizhou",
+            "name": "徽州区",
+            "x": 3349,
+            "y": 2343,
+            "width": 545,
+            "height": 550,
+            "route": "/huizhou"
+        },
+        {
+            "id": "xiuning",
+            "name": "休宁区",
+            "x": 3107,
+            "y": 3008,
+            "width": 418,
+            "height": 806,
+            "route": "/xiuning"
+        },
+        {
+            "id": "tunxi",
+            "name": "屯溪区",
+            "x": 3628,
+            "y": 2972,
+            "width": 484,
+            "height": 799,
+            "route": "/tunxi"
+        },
+        {
+            "id": "shexian",
+            "name": "歙县",
+            "x": 4336,
+            "y": 2452,
+            "width": 634,
+            "height": 762,
+            "route": "/shexian"
         }
     ]
 }

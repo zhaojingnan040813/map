@@ -7,6 +7,11 @@ import RouteDetail from '../views/RouteDetail.vue'
 import RecommendDetail from '../views/RecommendDetail.vue'
 import Qimen from '../views/Qimen.vue'
 import Yixian from '../views/Yixian.vue'
+import Huangshan from '../views/Huangshan.vue'
+import Huizhou from '../views/Huizhou.vue'
+import Xiuning from '../views/Xiuning.vue'
+import Tunxi from '../views/Tunxi.vue'
+import Shexian from '../views/Shexian.vue'
 
 const routes = [
   {
@@ -52,6 +57,31 @@ const routes = [
     path: '/yixian',
     name: 'Yixian',
     component: Yixian
+  },
+  {
+    path: '/huangshan',
+    name: 'Huangshan',
+    component: Huangshan
+  },
+  {
+    path: '/huizhou',
+    name: 'Huizhou',
+    component: Huizhou
+  },
+  {
+    path: '/xiuning',
+    name: 'Xiuning',
+    component: Xiuning
+  },
+  {
+    path: '/tunxi',
+    name: 'Tunxi',
+    component: Tunxi
+  },
+  {
+    path: '/shexian',
+    name: 'Shexian',
+    component: Shexian
   }
 ]
 
