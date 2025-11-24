@@ -6,6 +6,7 @@
     </div> -->
 
     <div class="route-container">
+      <h1 class="page-title">安徽省黄山市职工疗休养基地</h1>
       <div class="route-grid">
         <RouteCard
           v-for="route in routes"
@@ -38,10 +39,10 @@ const routes = ref(routesData.routes)
   background-size: 100% 100%;
   background-position: top center;
   background-repeat: no-repeat;
-  padding: 40px 20px 80px;
+  padding: 0px 20px 80px;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  overflow: hidden;
 }
 
 .route-header {
@@ -51,11 +52,20 @@ const routes = ref(routesData.routes)
 }
 
 .page-title {
-  font-size: 42px;
-  font-weight: 700;
-  color: #2c3e50;
-  margin: 0 0 12px 0;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 36px;
+  font-weight: bold;
+  color: #675529;
+  text-align: center;
+  margin-bottom: 0px;
+  background-image: url('../../png/chanpin/标题边框.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 30px 100px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 400px;
 }
 
 .page-subtitle {
@@ -65,11 +75,11 @@ const routes = ref(routesData.routes)
 }
 
 .route-container {
+  position: relative;
+  z-index: 2;
   max-width: 1400px;
   margin: 0 auto;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+  text-align: center;
 }
 
 .route-grid {
