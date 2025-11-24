@@ -19,10 +19,10 @@
       @click="navigateTo('/recommend')"
     />
     <img 
-      src="../png/nav/指南.png" 
-      alt="指南" 
+      src="../png/nav/产品.png" 
+      alt="产品" 
       class="nav-icon"
-      @click="navigateTo('/guide')"
+      @click="navigateTo('/product')"
     />
   </div>
 </template>
