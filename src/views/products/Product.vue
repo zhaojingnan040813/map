@@ -130,7 +130,7 @@ const handleProductClick = (product) => {
   background-size: cover;
   background-position: bottom center;
   background-repeat: no-repeat;
-  padding: 40px 20px 80px;
+  padding: 0px 20px 80px;
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
@@ -141,6 +141,7 @@ const handleProductClick = (product) => {
   z-index: 2;
   max-width: 1400px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .page-title {
@@ -148,7 +149,16 @@ const handleProductClick = (product) => {
   font-weight: bold;
   color: #675529;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 0px;
+  background-image: url('../../png/chanpin/标题边框.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 30px 100px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 400px;
 }
 
 .product-grid {
