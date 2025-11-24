@@ -15,7 +15,7 @@
           <div class="product-info">
             <h3 class="product-name">{{ product.name }}</h3>
             <p class="product-desc">{{ product.shortDescription }}</p>
-            <div class="product-price">{{ product.price }}</div>
+            <div class="product-detail-text">了解详情></div>
           </div>
         </div>
       </div>
@@ -224,11 +224,11 @@ const handleProductClick = (product) => {
   margin-bottom: 12px;
 }
 
-.product-price {
-  font-size: 20px;
-  font-weight: bold;
-  color: #e74c3c;
+.product-detail-text {
+  font-size: 16px;
+  color: #86742b;
   margin-top: auto;
+  text-align: left;
 }
 
 .pagination {
@@ -345,8 +345,8 @@ const handleProductClick = (product) => {
     font-size: 13px;
   }
 
-  .product-price {
-    font-size: 18px;
+  .product-detail-text {
+    font-size: 15px;
   }
 
   .pagination {
