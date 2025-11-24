@@ -10,8 +10,8 @@
 </template>
 
 <script setup>
-import ImageViewer from '../components/ImageViewer.vue'
-import locationImage from '../png/didian/歙县.png'
+import ImageViewer from '../../components/ImageViewer.vue'
+import locationImage from '../../png/didian/歙县.png'
 </script>
 
 <style scoped>

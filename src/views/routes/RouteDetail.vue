@@ -56,7 +56,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import routesData from '../data/routes.json'
+import routesData from '../../data/routes.json'
 
 const route = useRoute()
 const router = useRouter()

@@ -2,7 +2,7 @@
   <div class="location-page">
     <ImageViewer 
       :image-src="locationImage"
-      image-alt="黄山区"
+      image-alt="屯溪区"
       :enable-inertia="true"
       :border-feedback="true"
     />
@@ -10,8 +10,8 @@
 </template>
 
 <script setup>
-import ImageViewer from '../components/ImageViewer.vue'
-import locationImage from '../png/didian/黄山区.png'
+import ImageViewer from '../../components/ImageViewer.vue'
+import locationImage from '../../png/didian/屯溪区.png'
 </script>
 
 <style scoped>

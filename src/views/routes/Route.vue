@@ -24,8 +24,8 @@
 
 <script setup>
 import { ref } from 'vue'
-import RouteCard from '../components/RouteCard.vue'
-import routesData from '../data/routes.json'
+import RouteCard from '../../components/RouteCard.vue'
+import routesData from '../../data/routes.json'
 
 const routes = ref(routesData.routes)
 </script>
@@ -34,7 +34,7 @@ const routes = ref(routesData.routes)
 .route-page {
   width: 100%;
   min-height: 100vh;
-  background-image: url('../png/xianlu/背景图.png');
+  background-image: url('../../png/xianlu/背景图.png');
   background-size: 100% 100%;
   background-position: top center;
   background-repeat: no-repeat;

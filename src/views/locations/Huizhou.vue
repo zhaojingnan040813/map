@@ -2,7 +2,7 @@
   <div class="location-page">
     <ImageViewer 
       :image-src="locationImage"
-      image-alt="休宁县"
+      image-alt="徽州区"
       :enable-inertia="true"
       :border-feedback="true"
     />
@@ -10,8 +10,8 @@
 </template>
 
 <script setup>
-import ImageViewer from '../components/ImageViewer.vue'
-import locationImage from '../png/didian/休宁县.png'
+import ImageViewer from '../../components/ImageViewer.vue'
+import locationImage from '../../png/didian/徽州区.png'
 </script>
 
 <style scoped>

@@ -21,8 +21,8 @@
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-import RouteCard from '../components/RouteCard.vue'
-import recommendationsData from '../data/recommendations.json'
+import RouteCard from '../../components/RouteCard.vue'
+import recommendationsData from '../../data/recommendations.json'
 
 const router = useRouter()
 const recommendations = ref(recommendationsData.recommendations)
@@ -36,7 +36,7 @@ const goToDetail = (id) => {
 .recommend-page {
   width: 100%;
   min-height: 100vh;
-  background-image: url('../png/xianlu/背景图.png');
+  background-image: url('../../png/xianlu/背景图.png');
   background-size: 100% 100%;
   background-position: top center;
   background-repeat: no-repeat;

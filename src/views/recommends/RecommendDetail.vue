@@ -55,7 +55,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import recommendationsData from '../data/recommendations.json'
+import recommendationsData from '../../data/recommendations.json'
 
 const route = useRoute()
 const router = useRouter()
