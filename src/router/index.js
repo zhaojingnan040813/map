@@ -5,6 +5,7 @@ import Guide from '../views/Guide.vue'
 import Route from '../views/Route.vue'
 import RouteDetail from '../views/RouteDetail.vue'
 import RecommendDetail from '../views/RecommendDetail.vue'
+import CoordinatePickerPage from '../views/CoordinatePickerPage.vue'
 
 const routes = [
   {
@@ -40,6 +41,11 @@ const routes = [
     path: '/recommend/:id',
     name: 'RecommendDetail',
     component: RecommendDetail
+  },
+  {
+    path: '/picker',
+    name: 'CoordinatePicker',
+    component: CoordinatePickerPage
   }
 ]
 
