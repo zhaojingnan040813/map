@@ -1,6 +1,7 @@
 <template>
   <div class="recommend-page">
     <div class="recommend-container">
+      <h1 class="page-title">安徽省黄山市职工疗休养基地</h1>
       <div class="recommend-grid">
         <RouteCard
           v-for="recommendation in recommendations"
@@ -40,18 +41,35 @@ const goToDetail = (id) => {
   background-size: cover;
   background-position: bottom center;
   background-repeat: no-repeat;
-  padding: 40px 20px 80px;
+  padding: 0px 20px 80px;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  overflow: hidden;
 }
 
 .recommend-container {
+  position: relative;
+  z-index: 2;
   max-width: 1400px;
   margin: 0 auto;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #675529;
+  text-align: center;
+  margin-bottom: 0px;
+  background-image: url('../../png/chanpin/标题边框.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 30px 100px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 400px;
 }
 
 .recommend-grid {
@@ -85,6 +103,11 @@ const goToDetail = (id) => {
     background-attachment: scroll;
   }
 
+  .page-title {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+
   .recommend-grid {
     gap: 16px;
     padding-bottom: 30px;
@@ -94,6 +117,10 @@ const goToDetail = (id) => {
 @media (max-width: 480px) {
   .recommend-page {
     padding: 16px 12px 50px;
+  }
+
+  .page-title {
+    font-size: 28px;
   }
 
   .recommend-grid {
