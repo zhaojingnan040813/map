@@ -83,12 +83,14 @@ const goBack = () => {
   position: relative;
   z-index: 2;
   max-width: 1200px;
-  margin: 0 30px 30px;
+  margin: 0 auto;
   padding-bottom: 80px;
 }
 
 .detail-header {
   margin-bottom: 30px;
+  position: relative;
+  text-align: center;
 }
 
 .back-button {
@@ -96,15 +98,19 @@ const goBack = () => {
   border: none;
   padding: 0;
   cursor: pointer;
-  margin-bottom: 20px;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
 }
 
 .back-button:hover {
-  transform: translateX(-5px);
+  transform: translateY(-50%) translateX(-5px);
 }
 
 .back-icon {
@@ -114,11 +120,18 @@ const goBack = () => {
 }
 
 .product-title {
-  font-size: 42px;
+  font-size: 36px;
   font-weight: bold;
-  color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #675529;
+  text-align: center;
   margin: 0;
+  background-image: url('../../png/chanpin/标题边框.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 30px 100px;
+  display: inline-block;
+  min-width: 400px;
 }
 
 .detail-content {
@@ -231,6 +244,8 @@ const goBack = () => {
 
   .product-title {
     font-size: 32px;
+    padding: 25px 80px;
+    min-width: 300px;
   }
 
   .info-card {
@@ -249,7 +264,9 @@ const goBack = () => {
   }
 
   .product-title {
-    font-size: 28px;
+    font-size: 24px;
+    padding: 20px 50px;
+    min-width: 250px;
   }
 
   .back-icon {
