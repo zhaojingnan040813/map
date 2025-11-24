@@ -1,10 +1,10 @@
 <template>
   <div class="product-page">
     <div class="product-container">
-      <h1 class="page-title">黄山特色产品</h1>
+      <h1 class="page-title">新安康养产品</h1>
       <div class="product-grid">
         <div 
-          v-for="product in products"
+          v-for="product in currentPageProducts"
           :key="product.id"
           class="product-card"
           @click="handleProductClick(product)"
@@ -14,57 +14,124 @@
           </div>
           <div class="product-info">
             <h3 class="product-name">{{ product.name }}</h3>
-            <p class="product-desc">{{ product.description }}</p>
+            <p class="product-desc">{{ product.shortDescription }}</p>
+            <div class="product-price">{{ product.price }}</div>
           </div>
         </div>
+      </div>
+
+      <div class="pagination">
+        <button 
+          class="pagination-btn"
+          :disabled="currentPage === 1"
+          @click="goToPage(currentPage - 1)"
+        >
+          上一页
+        </button>
+        
+        <div class="pagination-pages">
+          <button
+            v-for="page in visiblePages"
+            :key="page"
+            class="pagination-page"
+            :class="{ active: page === currentPage }"
+            @click="goToPage(page)"
+          >
+            {{ page }}
+          </button>
+        </div>
+
+        <button 
+          class="pagination-btn"
+          :disabled="currentPage === totalPages"
+          @click="goToPage(currentPage + 1)"
+        >
+          下一页
+        </button>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import backgroundImage from '../../png/chanpin/产品背景.png'
-import huangshanLiwu from '../../png/chanpin/黄山礼物.png'
-import xinankangyuan from '../../png/chanpin/新安康源.png'
-import yihucha from '../../png/chanpin/壹葫茶.png'
+import { ref, computed } from 'vue'
+import { useRouter } from 'vue-router'
+import productsData from '../../data/products.json'
 
-const products = ref([
-  {
-    id: 1,
-    name: '黄山礼物',
-    description: '黄山特色伴手礼，传承徽州文化',
-    image: huangshanLiwu
-  },
-  {
-    id: 2,
-    name: '新安康源',
-    description: '新安江流域生态健康产品',
-    image: xinankangyuan
-  },
-  {
-    id: 3,
-    name: '壹葫茶',
-    description: '徽州传统名茶，品质上乘',
-    image: yihucha
+const router = useRouter()
+const currentPage = ref(1)
+const pageSize = 8
+
+const allProducts = ref(productsData.products)
+
+const totalPages = computed(() => {
+  return Math.ceil(allProducts.value.length / pageSize)
+})
+
+const currentPageProducts = computed(() => {
+  const start = (currentPage.value - 1) * pageSize
+  const end = start + pageSize
+  return allProducts.value.slice(start, end)
+})
+
+const visiblePages = computed(() => {
+  const pages = []
+  const total = totalPages.value
+  const current = currentPage.value
+  
+  if (total <= 7) {
+    for (let i = 1; i <= total; i++) {
+      pages.push(i)
+    }
+  } else {
+    if (current <= 4) {
+      for (let i = 1; i <= 5; i++) {
+        pages.push(i)
+      }
+      pages.push('...')
+      pages.push(total)
+    } else if (current >= total - 3) {
+      pages.push(1)
+      pages.push('...')
+      for (let i = total - 4; i <= total; i++) {
+        pages.push(i)
+      }
+    } else {
+      pages.push(1)
+      pages.push('...')
+      for (let i = current - 1; i <= current + 1; i++) {
+        pages.push(i)
+      }
+      pages.push('...')
+      pages.push(total)
+    }
   }
-])
+  
+  return pages
+})
+
+const goToPage = (page) => {
+  if (page >= 1 && page <= totalPages.value) {
+    currentPage.value = page
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+}
 
 const handleProductClick = (product) => {
-  console.log('点击产品:', product.name)
+  router.push(`/product/${product.id}`)
 }
 </script>
 
 <style scoped>
 .product-page {
   width: 100%;
-  height: 100%;
-  background-image: v-bind('`url(${backgroundImage})`');
-  background-size: cover;
-  background-position: center;
+  min-height: 100vh;
+  background-image: url('../../png/chanpin/产品背景.png');
+  background-size: 100% 100%;
+  background-position: top center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  overflow-y: auto;
+  padding: 40px 20px 80px;
+  box-sizing: border-box;
   position: relative;
 }
 
@@ -82,10 +149,8 @@ const handleProductClick = (product) => {
 .product-container {
   position: relative;
   z-index: 2;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 40px 20px;
-  min-height: 100%;
 }
 
 .page-title {
@@ -99,9 +164,9 @@ const handleProductClick = (product) => {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  padding: 20px 0;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
 }
 
 .product-card {
@@ -111,6 +176,8 @@ const handleProductClick = (product) => {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .product-card:hover {
@@ -138,10 +205,13 @@ const handleProductClick = (product) => {
 
 .product-info {
   padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .product-name {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   color: #333;
   margin-bottom: 8px;
@@ -151,11 +221,103 @@ const handleProductClick = (product) => {
   font-size: 14px;
   color: #666;
   line-height: 1.6;
+  flex: 1;
+  margin-bottom: 12px;
+}
+
+.product-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #e74c3c;
+  margin-top: auto;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 0;
+}
+
+.pagination-btn {
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-pages {
+  display: flex;
+  gap: 8px;
+}
+
+.pagination-page {
+  min-width: 40px;
+  height: 40px;
+  padding: 0 12px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pagination-page:hover {
+  background: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.pagination-page.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  font-weight: bold;
+}
+
+.pagination-page:disabled {
+  cursor: default;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 1400px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .page-title {
+    font-size: 32px;
+  }
 }
 
 @media (max-width: 768px) {
-  .product-container {
-    padding: 30px 15px;
+  .product-page {
+    padding: 30px 15px 60px;
   }
 
   .page-title {
@@ -164,12 +326,12 @@ const handleProductClick = (product) => {
   }
 
   .product-grid {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
   }
 
   .product-image-wrapper {
-    height: 180px;
+    height: 150px;
   }
 
   .product-info {
@@ -177,17 +339,37 @@ const handleProductClick = (product) => {
   }
 
   .product-name {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .product-desc {
     font-size: 13px;
   }
+
+  .product-price {
+    font-size: 18px;
+  }
+
+  .pagination {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .pagination-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .pagination-page {
+    min-width: 36px;
+    height: 36px;
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 480px) {
-  .product-container {
-    padding: 20px 10px;
+  .product-page {
+    padding: 20px 10px 50px;
   }
 
   .page-title {
@@ -197,11 +379,11 @@ const handleProductClick = (product) => {
 
   .product-grid {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 12px;
   }
 
   .product-image-wrapper {
-    height: 160px;
+    height: 180px;
   }
 }
 </style>

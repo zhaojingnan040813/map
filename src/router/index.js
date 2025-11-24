@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Recommend from '../views/recommends/Recommend.vue'
 import Product from '../views/products/Product.vue'
+import ProductDetail from '../views/products/ProductDetail.vue'
 import Route from '../views/routes/Route.vue'
 import RouteDetail from '../views/routes/RouteDetail.vue'
 import RecommendDetail from '../views/recommends/RecommendDetail.vue'
@@ -32,6 +33,11 @@ const routes = [
     path: '/product',
     name: 'Product',
     component: Product
+  },
+  {
+    path: '/product/:id',
+    name: 'ProductDetail',
+    component: ProductDetail
   },
   {
     path: '/route',
