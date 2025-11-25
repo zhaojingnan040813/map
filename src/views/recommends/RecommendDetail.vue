@@ -206,12 +206,13 @@ const goBack = () => {
 }
 
 .section-title {
-  font-size: 20px;
+  font-size: 32px;
   font-weight: 600;
-  color: #1a1a1a;
+  color: #88712b;
   margin: 0 0 20px 0;
   padding-bottom: 12px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
 .introduction-content {
