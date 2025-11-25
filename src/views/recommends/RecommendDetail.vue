@@ -1,8 +1,10 @@
 <template>
   <div class="recommend-detail-page" v-if="recommendDetail">
     <div class="detail-header">
-      <button class="back-btn" @click="goBack">← 返回</button>
-      <h1 class="detail-title">{{ recommendDetail.details.title }}</h1>
+      <button class="back-button" @click="goBack">
+        <img src="../../assets/back.svg" alt="返回" class="back-icon" />
+      </button>
+      <h1 class="product-title">{{ recommendDetail.details.title }}</h1>
     </div>
 
     <div class="detail-content">
@@ -89,37 +91,50 @@ const goBack = () => {
 }
 
 .detail-header {
-  max-width: 1200px;
-  margin: 0 auto 30px;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 24px;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-}
-
-.back-btn {
-  padding: 8px 16px;
-  background: #8b7355;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 14px;
-  cursor: pointer;
-  margin-bottom: 16px;
-  transition: all 0.3s;
-}
-
-.back-btn:hover {
-  background: #6d5a42;
-  transform: translateX(-2px);
-}
-
-.detail-title {
-  font-size: 28px;
-  font-weight: 700;
-  color: #2c3e50;
-  margin: 0;
+  margin-bottom: 30px;
+  position: relative;
   text-align: center;
+}
+
+.back-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.back-button:hover {
+  transform: translateY(-50%) translateX(-5px);
+}
+
+.back-icon {
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+
+.product-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #675529;
+  text-align: center;
+  margin: 0;
+  background-image: url('../../png/chanpin/标题边框.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 30px 100px;
+  display: inline-block;
+  min-width: 400px;
 }
 
 .detail-content {
@@ -239,13 +254,10 @@ const goBack = () => {
     padding: 12px;
   }
 
-  .detail-header {
-    padding: 16px;
-    margin-bottom: 20px;
-  }
-
-  .detail-title {
-    font-size: 22px;
+  .product-title {
+    font-size: 32px;
+    padding: 25px 80px;
+    min-width: 300px;
   }
 
   .detail-content {
@@ -271,6 +283,19 @@ const goBack = () => {
 
   .info-value {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-title {
+    font-size: 24px;
+    padding: 20px 50px;
+    min-width: 250px;
+  }
+
+  .back-icon {
+    width: 40px;
+    height: 40px;
   }
 }
 </style>
