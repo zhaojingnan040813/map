@@ -27,15 +27,7 @@
               <span class="info-icon">👤</span>
               <span>联系人</span>
             </div>
-            <div class="info-value">{{ recommendDetail.details.contactName }}</div>
-          </div>
-          
-          <div class="info-item">
-            <div class="info-label">
-              <span class="info-icon">📞</span>
-              <span>联系电话</span>
-            </div>
-            <div class="info-value">{{ recommendDetail.details.contactPhone }}</div>
+            <div class="info-value">{{ recommendDetail.details.contactName }}：{{ recommendDetail.details.contactPhone }}</div>
           </div>
         </div>
       </div>
@@ -172,10 +164,8 @@ const goBack = () => {
 }
 
 .info-card {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 12px;
+  background: transparent;
   padding: 32px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
 .info-item {
@@ -190,6 +180,8 @@ const goBack = () => {
   display: flex;
   align-items: center;
   font-size: 14px;
+  font-weight: 600;
+  color: #4a3f2f;
   font-weight: 600;
   color: #8b7355;
   margin-bottom: 8px;
