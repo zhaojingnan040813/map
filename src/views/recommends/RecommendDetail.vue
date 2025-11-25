@@ -138,11 +138,11 @@ const goBack = () => {
 }
 
 .detail-content {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
   display: flex;
-  gap: 24px;
-  padding-bottom: 40px;
+  gap: 30px;
+  padding-bottom: 50px;
 }
 
 .left-section {
@@ -167,14 +167,14 @@ const goBack = () => {
   width: 100%;
   height: auto;
   display: block;
-  min-height: 300px;
+  min-height: 450px;
   object-fit: cover;
 }
 
 .info-card {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 12px;
-  padding: 24px;
+  padding: 32px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
@@ -201,37 +201,35 @@ const goBack = () => {
 }
 
 .info-value {
-  font-size: 15px;
+  font-size: 16px;
   color: #333;
   line-height: 1.6;
   padding-left: 26px;
 }
 
 .introduction-card {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 12px;
-  padding: 28px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  background: transparent;
+  padding: 36px;
   height: 100%;
 }
 
 .section-title {
   font-size: 20px;
   font-weight: 600;
-  color: #2c3e50;
+  color: #1a1a1a;
   margin: 0 0 20px 0;
   padding-bottom: 12px;
-  border-bottom: 2px solid #f0f0f0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 }
 
 .introduction-content {
-  font-size: 15px;
-  color: #555;
-  line-height: 1.8;
+  font-size: 17px;
+  color: #2c2c2c;
+  line-height: 1.9;
 }
 
 .introduction-content p {
-  margin: 0 0 16px 0;
+  margin: 0 0 20px 0;
   text-indent: 2em;
 }
 
