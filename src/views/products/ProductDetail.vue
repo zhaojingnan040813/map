@@ -177,11 +177,11 @@ const goBack = () => {
 }
 
 .section-title {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
-  color: #333;
+  color: #88712b;
   margin: 0 0 20px 0;
-  text-align: left;
+  text-align: center;
 }
 
 .description-text {
