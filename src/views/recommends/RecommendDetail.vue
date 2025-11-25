@@ -201,7 +201,7 @@ const goBack = () => {
 
 .introduction-card {
   background: transparent;
-  padding: 36px;
+   padding: 0 36px 36px 36px;
   height: 100%;
 }
 
