@@ -103,7 +103,7 @@ const currentPageRoutes = computed(() => {
 .route-grid {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 80px;
   padding-bottom: 40px;
   animation: fadeInUp 0.8s ease-out;
 }

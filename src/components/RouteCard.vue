@@ -7,20 +7,22 @@
       <h3 class="route-title">{{ title }}</h3>
       <p class="route-description">{{ description }}</p>
       <div class="route-info">
-        <div class="info-item">
-          <span class="info-icon">
-            <img src="@/assets/location.svg" alt="location" />
-          </span>
-          <span class="info-text">{{ address }}</span>
+        <div class="info-items">
+          <div class="info-item">
+            <span class="info-icon">
+              <img src="@/assets/location.svg" alt="location" />
+            </span>
+            <span class="info-text">{{ address }}</span>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">
+              <img src="@/assets/phone.svg" alt="phone" />
+            </span>
+            <span class="info-text">{{ contact }}</span>
+          </div>
         </div>
-        <div class="info-item">
-          <span class="info-icon">
-            <img src="@/assets/phone.svg" alt="phone" />
-          </span>
-          <span class="info-text">{{ contact }}</span>
-        </div>
+        <button class="learn-more-btn" @click="goToDetail">了解更多</button>
       </div>
-      <button class="learn-more-btn" @click="goToDetail">了解更多</button>
     </div>
   </div>
 </template>
@@ -98,7 +100,7 @@ const goToDetail = () => {
 }
 
 .route-content {
-  padding: 0 24px;
+  padding: 0 170px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -121,7 +123,14 @@ const goToDetail = () => {
 }
 
 .route-info {
-  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.info-items {
+  flex: 1;
 }
 
 .info-item {
@@ -155,8 +164,6 @@ const goToDetail = () => {
 }
 
 .learn-more-btn {
-  margin-top: 16px;
-  align-self: flex-start;
   padding: 10px 24px;
   background: linear-gradient(135deg, #c3bb9c 0%, #929089 100%);
   color: #fff;
@@ -167,6 +174,7 @@ const goToDetail = () => {
   cursor: pointer;
   transition: all 0.3s ease;
   outline: none;
+  flex-shrink: 0;
 }
 
 .learn-more-btn:hover {
@@ -201,6 +209,12 @@ const goToDetail = () => {
 
   .route-content {
     padding: 16px;
+  }
+
+  .route-info {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
   }
 
   .route-title {
