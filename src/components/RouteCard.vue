@@ -8,11 +8,15 @@
       <p class="route-description">{{ description }}</p>
       <div class="route-info">
         <div class="info-item">
-          <span class="info-icon">📍</span>
+          <span class="info-icon">
+            <img src="@/assets/location.svg" alt="location" />
+          </span>
           <span class="info-text">{{ address }}</span>
         </div>
         <div class="info-item">
-          <span class="info-icon">📞</span>
+          <span class="info-icon">
+            <img src="@/assets/phone.svg" alt="phone" />
+          </span>
           <span class="info-text">{{ contact }}</span>
         </div>
       </div>
@@ -142,6 +146,14 @@ const goToDetail = () => {
   font-size: 16px;
   margin-right: 8px;
   flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+.info-icon img {
+  width: 16px;
+  height: 16px;
+  display: block;
 }
 
 .info-text {
@@ -213,6 +225,11 @@ const goToDetail = () => {
 
   .info-icon {
     font-size: 14px;
+  }
+
+  .info-icon img {
+    width: 14px;
+    height: 14px;
   }
 
   .learn-more-btn {
