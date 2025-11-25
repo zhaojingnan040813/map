@@ -18,7 +18,7 @@
             <span class="info-icon">
               <img src="@/assets/phone.svg" alt="phone" />
             </span>
-            <span class="info-text">{{ contact }}</span>
+            <span class="info-text">{{  contact }}</span>
           </div>
         </div>
         <button class="learn-more-btn" @click="goToDetail">了解更多</button>
@@ -109,17 +109,19 @@ const goToDetail = () => {
 .route-title {
   font-size: 20px;
   font-weight: 600;
-  color: #333;
+  color: #86742b;
   margin: 0 0 12px 0;
   line-height: 1.4;
+  text-align: left;
 }
 
 .route-description {
   font-size: 14px;
-  color: #666;
+   color: #4b5563;
   line-height: 1.8;
   margin: 0 0 16px 0;
   flex: 1;
+  text-align: left;
 }
 
 .route-info {
@@ -138,7 +140,7 @@ const goToDetail = () => {
   align-items: center;
   margin-bottom: 8px;
   font-size: 13px;
-  color: #666;
+  color: #86742b;
 }
 
 .info-item:last-child {
