@@ -19,18 +19,19 @@
           <div class="info-card">
             <h2 class="section-title">产品介绍</h2>
             <p class="description-text">{{ product.details.description }}</p>
-          </div>
-
-          <div class="info-card contact-card">
-            <h2 class="section-title">联系方式</h2>
+            
+            <div class="contact-divider"></div>
+            
             <div class="contact-info">
               <div class="contact-item">
-                <span class="contact-icon">📞</span>
-                <span class="contact-text">{{ product.details.contact }}</span>
+                <span class="contact-icon">📍</span>
+                <span class="contact-label">生产厂家</span>
+                <span class="contact-text">{{ product.details.address }}</span>
               </div>
               <div class="contact-item">
-                <span class="contact-icon">📍</span>
-                <span class="contact-text">{{ product.details.address }}</span>
+                <span class="contact-icon">📞</span>
+                <span class="contact-label">联系人</span>
+                <span class="contact-text">{{ product.details.contact }}</span>
               </div>
             </div>
           </div>
@@ -167,10 +168,12 @@ const goBack = () => {
 }
 
 .info-card {
-  background: rgba(255, 255, 255, 0.95);
-  padding: 25px;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  position: relative;
 }
 
 .section-title {
@@ -178,8 +181,7 @@ const goBack = () => {
   font-weight: bold;
   color: #333;
   margin: 0 0 20px 0;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #667eea;
+  text-align: left;
 }
 
 .description-text {
@@ -189,9 +191,10 @@ const goBack = () => {
   margin: 0;
 }
 
-.contact-card {
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
-  border: 2px solid rgba(102, 126, 234, 0.3);
+.contact-divider {
+  height: 1px;
+  background: #e0e0e0;
+  margin: 30px 0;
 }
 
 .contact-info {
@@ -203,17 +206,26 @@ const goBack = () => {
 .contact-item {
   display: flex;
   align-items: center;
-  font-size: 16px;
+  font-size: 15px;
   color: #555;
 }
 
 .contact-icon {
-  font-size: 24px;
-  margin-right: 12px;
+  font-size: 20px;
+  margin-right: 10px;
+  min-width: 28px;
+}
+
+.contact-label {
+  font-weight: 600;
+  color: #333;
+  margin-right: 8px;
+  min-width: 80px;
 }
 
 .contact-text {
   flex: 1;
+  color: #555;
 }
 
 .loading-container {
@@ -248,14 +260,17 @@ const goBack = () => {
     min-width: 300px;
   }
 
-  .info-card {
-    padding: 20px;
-  }
-
   .section-title {
-    font-size: 20px;
+    font-size: 22px;
   }
 
+  .description-text {
+    font-size: 15px;
+  }
+
+  .contact-label {
+    min-width: 70px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -274,12 +289,21 @@ const goBack = () => {
     height: 40px;
   }
 
-  .info-card {
-    padding: 15px;
+  .section-title {
+    font-size: 20px;
   }
 
-  .section-title {
-    font-size: 18px;
+  .description-text {
+    font-size: 14px;
+  }
+
+  .contact-item {
+    font-size: 14px;
+  }
+
+  .contact-label {
+    min-width: 60px;
+    font-size: 14px;
   }
 }
 </style>

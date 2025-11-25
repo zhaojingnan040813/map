@@ -1,6 +1,6 @@
 <template>
   <div class="route-detail-page" v-if="routeDetail">
-    <!-- <div class="detail-header">
+    <div class="detail-header">
 
 
 
@@ -54,9 +54,8 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
   
-  <div style="height: 9004px;">11 1</div>
   </div>
 </template>
 
