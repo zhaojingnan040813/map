@@ -1,6 +1,11 @@
 <template>
   <div class="route-detail-page" v-if="routeDetail">
-    <div class="detail-header">
+    <!-- <div class="detail-header">
+
+
+
+
+
       <button class="back-btn" @click="goBack">← 返回</button>
       <div class="header-info">
         <h1 class="route-title">{{ routeDetail.title }}</h1>
@@ -49,7 +54,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
+  
+  <div style="height: 9004px;">11 1</div>
   </div>
 </template>
 
@@ -76,7 +83,10 @@ const goBack = () => {
 .route-detail-page {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(to bottom, #f5f0e8 0%, #e8dcc8 100%);
+  background-image: url('../../png/xianlu/xianluXQ/线路详情背景.png');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 20px;
   box-sizing: border-box;
 }
