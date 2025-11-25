@@ -64,26 +64,22 @@ const goToDetail = () => {
 
 <style scoped>
 .route-card {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 12px;
+  background: transparent;
   overflow: hidden;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   display: flex;
   flex-direction: row;
   height: auto;
-  min-height: 200px;
 }
 
 .route-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+
 }
 
 .route-image {
-  width: 300px;
-  min-width: 300px;
+  width: 400px;
+  min-width: 400px;
+  height: 200px;
   flex-shrink: 0;
   overflow: hidden;
   background: #f5f5f5;
@@ -93,9 +89,8 @@ const goToDetail = () => {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: bottom;
+  object-position: center;
   transition: transform 0.3s ease;
-  min-height: 200px;
 }
 
 .route-card:hover .route-image img {
@@ -103,12 +98,10 @@ const goToDetail = () => {
 }
 
 .route-content {
-  padding: 24px;
+  padding: 0 24px;
   flex: 1;
   display: flex;
   flex-direction: column;
-  position: relative;
-  padding-bottom: 70px;
 }
 
 .route-title {
@@ -162,9 +155,8 @@ const goToDetail = () => {
 }
 
 .learn-more-btn {
-  position: absolute;
-  bottom: 24px;
-  right: 24px;
+  margin-top: 16px;
+  align-self: flex-start;
   padding: 10px 24px;
   background: linear-gradient(135deg, #c3bb9c 0%, #929089 100%);
   color: #fff;
@@ -190,23 +182,25 @@ const goToDetail = () => {
 @media (max-width: 768px) {
   .route-card {
     flex-direction: column;
-    min-height: auto;
   }
 
   .route-image {
     width: 100%;
     min-width: 100%;
-    height: 180px;
+    height: 0;
+    padding-bottom: 50%;
+    position: relative;
   }
 
   .route-image img {
-    min-height: 180px;
-    object-position: bottom;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-position: center;
   }
 
   .route-content {
     padding: 16px;
-    padding-bottom: 60px;
   }
 
   .route-title {
