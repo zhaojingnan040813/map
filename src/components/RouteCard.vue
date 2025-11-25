@@ -107,7 +107,7 @@ const goToDetail = () => {
 }
 
 .route-title {
-  font-size: 20px;
+  font-size: 36px;
   font-weight: 600;
   color: #86742b;
   margin: 0 0 12px 0;
@@ -116,7 +116,7 @@ const goToDetail = () => {
 }
 
 .route-description {
-  font-size: 14px;
+  font-size: 16px;
    color: #4b5563;
   line-height: 1.8;
   margin: 0 0 16px 0;
@@ -139,7 +139,7 @@ const goToDetail = () => {
   display: flex;
   align-items: center;
   margin-bottom: 8px;
-  font-size: 13px;
+  font-size: 16px;
   color: #86742b;
 }
 
@@ -231,7 +231,7 @@ const goToDetail = () => {
   }
 
   .info-item {
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 6px;
   }
 
