@@ -9,7 +9,7 @@
       <h1 class="page-title">安徽省黄山市职工疗休养基地</h1>
       <div class="route-grid">
         <RouteCard
-          v-for="route in routes"
+          v-for="route in currentPageRoutes"
           :key="route.id"
           :id="route.id"
           :imageUrl="route.imageUrl"
@@ -19,16 +19,34 @@
           :contact="route.contact"
         />
       </div>
+
+      <Pagination
+        v-model:currentPage="currentPage"
+        :totalPages="totalPages"
+      />
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import RouteCard from '../../components/RouteCard.vue'
+import Pagination from '../../components/Pagination.vue'
 import routesData from '../../data/routes.json'
 
 const routes = ref(routesData.routes)
+const currentPage = ref(1)
+const pageSize = 4
+
+const totalPages = computed(() => {
+  return Math.ceil(routes.value.length / pageSize)
+})
+
+const currentPageRoutes = computed(() => {
+  const start = (currentPage.value - 1) * pageSize
+  const end = start + pageSize
+  return routes.value.slice(start, end)
+})
 </script>
 
 <style scoped>

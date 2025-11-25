@@ -93,6 +93,7 @@ const goToDetail = () => {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: bottom;
   transition: transform 0.3s ease;
   min-height: 200px;
 }
@@ -200,6 +201,7 @@ const goToDetail = () => {
 
   .route-image img {
     min-height: 180px;
+    object-position: bottom;
   }
 
   .route-content {
