@@ -4,7 +4,7 @@
       <h1 class="page-title">安徽省黄山市职工疗休养基地</h1>
       <div class="recommend-grid">
         <RouteCard
-          v-for="recommendation in recommendations"
+          v-for="recommendation in currentPageRecommendations"
           :key="recommendation.id"
           :id="recommendation.id"
           :imageUrl="recommendation.imageUrl"
@@ -15,18 +15,36 @@
           @click="goToDetail(recommendation.id)"
         />
       </div>
+
+      <Pagination
+        v-model:currentPage="currentPage"
+        :totalPages="totalPages"
+      />
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import RouteCard from '../../components/RouteCard.vue'
+import Pagination from '../../components/Pagination.vue'
 import recommendationsData from '../../data/recommendations.json'
 
 const router = useRouter()
 const recommendations = ref(recommendationsData.recommendations)
+const currentPage = ref(1)
+const pageSize = 4
+
+const totalPages = computed(() => {
+  return Math.ceil(recommendations.value.length / pageSize)
+})
+
+const currentPageRecommendations = computed(() => {
+  const start = (currentPage.value - 1) * pageSize
+  const end = start + pageSize
+  return recommendations.value.slice(start, end)
+})
 
 const goToDetail = (id) => {
   router.push({ name: 'RecommendDetail', params: { id } })

@@ -54,8 +54,8 @@ const currentPageRoutes = computed(() => {
   width: 100%;
   min-height: 100vh;
   background-image: url('../../png/xianlu/背景图.png');
-  background-size: 100% 100%;
-  background-position: top center;
+  background-size: cover;
+  background-position: bottom center;
   background-repeat: no-repeat;
   padding: 0px 20px 80px;
   box-sizing: border-box;
