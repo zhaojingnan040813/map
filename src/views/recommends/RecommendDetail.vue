@@ -80,7 +80,10 @@ const goBack = () => {
 .recommend-detail-page {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(to bottom, #f5f0e8 0%, #e8dcc8 100%);
+  background-image: url('../../png/tuijian/tuijianXQ/背景图.png');
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
   padding: 20px;
   box-sizing: border-box;
 }
