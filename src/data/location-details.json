@@ -88,6 +88,66 @@
             ]
         },
         {
+            "id": "qimen",
+            "name": "祁门县",
+            "details": [
+                {
+                    "id": "yuexiangwentang",
+                    "title": "悦享文堂故里康养基地",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市祁门县文堂村",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "悦享文堂故里康养基地位于祁门县文堂村，是一个集康养度假、文化体验、生态休闲于一体的综合性康养项目。基地依托文堂村深厚的历史文化底蕴和优美的自然环境，为游客提供高品质的康养服务和独特的乡村文化体验。"
+                },
+                {
+                    "id": "wumingchu",
+                    "title": "祁门文堂·无名初酒店",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市祁门县文堂村",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "祁门文堂·无名初酒店是一家融合徽州传统建筑风格与现代设计理念的精品酒店。酒店坐落于文堂村，环境清幽，设施完善，为游客提供舒适的住宿体验和周到的服务，是体验祁门乡村风情的理想下榻之地。"
+                },
+                {
+                    "id": "zhoushanganxiang",
+                    "title": "舟上安乡",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市祁门县",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "舟上安乡是一个以水乡文化为特色的旅游项目，依托祁门县独特的水系资源，打造集水上游览、休闲垂钓、生态观光于一体的乡村旅游目的地。这里水清景美，民风淳朴，让游客感受江南水乡的独特韵味。"
+                },
+                {
+                    "id": "meinandu",
+                    "title": "开元一然村·梅南渡",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市祁门县梅南渡",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "开元一然村·梅南渡项目由开元集团倾力打造，是一个高端乡村度假目的地。项目依托梅南渡优美的自然风光，融合徽州传统文化与现代生活方式，提供精品民宿、餐饮美食、休闲娱乐等多元化服务，为游客带来独特的乡村度假体验。"
+                },
+                {
+                    "id": "qunfangzui",
+                    "title": "祁驿·群芳最",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市祁门县",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "祁驿·群芳最是一个以花卉观赏和田园体验为主题的休闲旅游项目。项目汇集各类名贵花卉，打造四季花海景观，同时融合农耕体验、亲子活动等内容，为游客提供赏花、游园、休闲的综合性体验。"
+                },
+                {
+                    "id": "ciqingbuluo",
+                    "title": "瓷情部落",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市祁门县",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "瓷情部落是一个以陶瓷文化为主题的特色旅游项目。项目展示了祁门地区悠久的陶瓷制作历史和精湛的工艺技术，游客可以参观陶瓷展览、体验陶艺制作、定制个性化陶瓷产品，深入了解中国陶瓷文化的魅力。"
+                }
+            ]
+        },
+        {
             "id": "huangshan",
             "name": "黄山区",
             "details": [

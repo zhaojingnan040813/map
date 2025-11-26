@@ -159,6 +159,66 @@
         "width": 6142,
         "height": 3898
     },
+    "qimenHotspots": [
+        {
+            "id": "yuexiangwentang",
+            "name": "悦享文堂故里康养基地",
+            "x": 1256,
+            "y": 912,
+            "width": 1058,
+            "height": 679,
+            "route": "/qimen/yuexiangwentang"
+        },
+        {
+            "id": "wumingchu",
+            "name": "祁门文堂·无名初酒店",
+            "x": 2352,
+            "y": 907,
+            "width": 548,
+            "height": 635,
+            "route": "/qimen/wumingchu"
+        },
+        {
+            "id": "zhoushanganxiang",
+            "name": "舟上安乡",
+            "x": 2064,
+            "y": 1629,
+            "width": 586,
+            "height": 450,
+            "route": "/qimen/zhoushanganxiang"
+        },
+        {
+            "id": "meinandu",
+            "name": "开元一然村·梅南渡",
+            "x": 2710,
+            "y": 1710,
+            "width": 597,
+            "height": 570,
+            "route": "/qimen/meinandu"
+        },
+        {
+            "id": "qunfangzui",
+            "name": "祁驿·群芳最",
+            "x": 2412,
+            "y": 2302,
+            "width": 1041,
+            "height": 510,
+            "route": "/qimen/qunfangzui"
+        },
+        {
+            "id": "ciqingbuluo",
+            "name": "瓷情部落",
+            "x": 4007,
+            "y": 1417,
+            "width": 787,
+            "height": 858,
+            "route": "/qimen/ciqingbuluo"
+        }
+    ],
+    "qimenImageSize": {
+        "width": 6142,
+        "height": 3898
+    },
     "homeHotspots": [
         {
             "id": "qimen",
