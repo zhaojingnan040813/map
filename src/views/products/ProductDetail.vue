@@ -199,7 +199,7 @@ const goBack = () => {
 .info-card {
   background: transparent;
   padding: 32px 36px;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  /* border-top: 1px solid rgba(0, 0, 0, 0.1); */
 }
 
 .info-item {
