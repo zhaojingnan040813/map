@@ -3,6 +3,75 @@
         "width": 6850,
         "height": 5000
     },
+    "huangshanHotspots": [
+        {
+            "id": "tangjiazhuang",
+            "name": "汤家庄民宿集群",
+            "x": 2113,
+            "y": 1129,
+            "width": 727,
+            "height": 597,
+            "route": "/huangshan/tangjiazhuang"
+        },
+        {
+            "id": "taipinghu",
+            "name": "太平湖美丽港湾",
+            "x": 2927,
+            "y": 673,
+            "width": 966,
+            "height": 771,
+            "route": "/huangshan/taipinghu"
+        },
+        {
+            "id": "xianyuanju",
+            "name": "仙源居项目",
+            "x": 3660,
+            "y": 1562,
+            "width": 727,
+            "height": 526,
+            "route": "/huangshan/xianyuanju"
+        },
+        {
+            "id": "huzhu",
+            "name": "黄山互助公社",
+            "x": 3094,
+            "y": 2084,
+            "width": 505,
+            "height": 396,
+            "route": "/huangshan/huzhu"
+        },
+        {
+            "id": "yanwoli",
+            "name": "黄山燕窝里文化旅游景区",
+            "x": 2634,
+            "y": 2568,
+            "width": 635,
+            "height": 570,
+            "route": "/huangshan/yanwoli"
+        },
+        {
+            "id": "xingfushijia",
+            "name": "幸福世家",
+            "x": 3627,
+            "y": 2188,
+            "width": 640,
+            "height": 467,
+            "route": "/huangshan/xingfushijia"
+        },
+        {
+            "id": "chalinchang",
+            "name": "黄山茶林场康养基地",
+            "x": 3882,
+            "y": 2709,
+            "width": 678,
+            "height": 510,
+            "route": "/huangshan/chalinchang"
+        }
+    ],
+    "huangshanImageSize": {
+        "width": 6142,
+        "height": 3898
+    },
     "homeHotspots": [
         {
             "id": "qimen",
