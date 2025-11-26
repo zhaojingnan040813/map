@@ -98,7 +98,7 @@ const goBack = () => {
   align-items: center;
   justify-content: center;
   position: absolute;
-  left: 0;
+  left: 130px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
@@ -245,6 +245,10 @@ const goBack = () => {
     padding: 12px;
   }
 
+  .back-button {
+    left: 30px;
+  }
+
   .product-title {
     font-size: 32px;
     padding: 25px 80px;
@@ -278,6 +282,10 @@ const goBack = () => {
 }
 
 @media (max-width: 480px) {
+  .back-button {
+    left: 7px;
+  }
+
   .product-title {
     font-size: 24px;
     padding: 20px 50px;
