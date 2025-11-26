@@ -1,6 +1,93 @@
 {
     "locations": [
         {
+            "id": "huizhou",
+            "name": "徽州区",
+            "details": [
+                {
+                    "id": "xingkongchengyang",
+                    "title": "星空呈阳",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市徽州区呈阳村",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "星空呈阳位于徽州区呈阳村，是一个集星空观测、生态休闲、民宿体验于一体的特色旅游项目。这里远离城市光污染，夜空清澈，是观星爱好者的理想之地。项目融合了徽州传统建筑风格与现代观星设施，为游客提供独特的星空体验。"
+                },
+                {
+                    "id": "feiyiyangsengu",
+                    "title": "非遗氧森谷",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市徽州区",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "非遗氧森谷是一个以徽州非物质文化遗产保护与传承为主题的生态康养基地。这里汇聚了徽州传统手工艺、民俗文化、中医养生等非遗项目，游客可以在天然氧吧中体验徽州文化的独特魅力，感受传统与自然的完美融合。"
+                },
+                {
+                    "id": "qingchungu",
+                    "title": "青春谷研学康养",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市徽州区",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "青春谷研学康养基地专注于青少年研学教育与健康养生相结合。基地设有丰富的研学课程，涵盖徽州文化、自然科学、农耕体验等内容，同时提供康养服务，让学生在学习中收获健康，在健康中促进成长。"
+                },
+                {
+                    "id": "dalingshan",
+                    "title": "大灵山旅游度假区",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市徽州区大灵山",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "大灵山旅游度假区依托大灵山优美的自然风光和深厚的文化底蕴，打造集观光、休闲、度假于一体的综合性旅游目的地。度假区内山峦叠翠，溪水潺潺，空气清新，是都市人群放松身心、回归自然的理想选择。"
+                },
+                {
+                    "id": "shuyuankangyang",
+                    "title": "蜀源康养度假生态区",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市徽州区蜀源村",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "蜀源康养度假生态区位于风景秀丽的蜀源村，以生态康养为核心，融合田园风光、徽派建筑、养生文化等元素。这里保留了原生态的乡村环境，提供高品质的康养服务，是体验徽州乡村生活、享受健康度假的绝佳去处。"
+                },
+                {
+                    "id": "taijishuyuan",
+                    "title": "太极书院",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市徽州区",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "太极书院是一个以太极文化传承与健康养生为主题的文化场所。书院秉承传统太极理念，开设太极拳教学、养生功法、国学讲座等课程，为游客提供身心修养、文化熏陶的独特体验。"
+                },
+                {
+                    "id": "yuancanghuizhou",
+                    "title": "院藏徽州",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市徽州区",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "院藏徽州是一个展示徽州文化精髓的特色文化项目。项目以徽州传统院落为载体，收藏展示徽州文物、书画、工艺品等珍贵文化遗产，让游客深入了解徽州文化的博大精深，感受徽州人文的独特魅力。"
+                },
+                {
+                    "id": "xieyuda",
+                    "title": "谢裕大",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市徽州区",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "谢裕大是中华老字号茶叶品牌，其文化体验中心位于徽州区。这里展示了黄山毛峰的制作工艺和茶文化历史，游客可以参观茶园、体验采茶制茶、品鉴名茶，深入了解徽州茶文化的悠久传承。"
+                },
+                {
+                    "id": "wujixue",
+                    "title": "无极雪水疗中心",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市徽州区",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "无极雪水疗中心是一个高端健康养生场所，以天然温泉水疗为特色，结合中医养生、SPA护理等多种服务。中心环境优雅，设施完善，为游客提供专业的身心调理和放松体验，是康养度假的理想选择。"
+                }
+            ]
+        },
+        {
             "id": "huangshan",
             "name": "黄山区",
             "details": [

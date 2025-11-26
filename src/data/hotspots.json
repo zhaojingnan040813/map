@@ -72,6 +72,93 @@
         "width": 6142,
         "height": 3898
     },
+    "huizhouHotspots": [
+        {
+            "id": "xingkongchengyang",
+            "name": "星空呈阳",
+            "x": 2824,
+            "y": 228,
+            "width": 662,
+            "height": 869,
+            "route": "/huizhou/xingkongchengyang"
+        },
+        {
+            "id": "feiyiyangsengu",
+            "name": "非遗氧森谷",
+            "x": 1793,
+            "y": 1057,
+            "width": 961,
+            "height": 577,
+            "route": "/huizhou/feiyiyangsengu"
+        },
+        {
+            "id": "qingchungu",
+            "name": "青春谷研学康养",
+            "x": 2249,
+            "y": 1721,
+            "width": 743,
+            "height": 293,
+            "route": "/huizhou/qingchungu"
+        },
+        {
+            "id": "dalingshan",
+            "name": "大灵山旅游度假区",
+            "x": 2840,
+            "y": 1156,
+            "width": 673,
+            "height": 456,
+            "route": "/huizhou/dalingshan"
+        },
+        {
+            "id": "shuyuankangyang",
+            "name": "蜀源康养度假生态区",
+            "x": 3014,
+            "y": 1645,
+            "width": 705,
+            "height": 288,
+            "route": "/huizhou/shuyuankangyang"
+        },
+        {
+            "id": "taijishuyuan",
+            "name": "太极书院",
+            "x": 2634,
+            "y": 2047,
+            "width": 662,
+            "height": 315,
+            "route": "/huizhou/taijishuyuan"
+        },
+        {
+            "id": "yuancanghuizhou",
+            "name": "院藏徽州",
+            "x": 2889,
+            "y": 2383,
+            "width": 456,
+            "height": 456,
+            "route": "/huizhou/yuancanghuizhou"
+        },
+        {
+            "id": "xieyuda",
+            "name": "谢裕大",
+            "x": 3421,
+            "y": 2020,
+            "width": 597,
+            "height": 662,
+            "route": "/huizhou/xieyuda"
+        },
+        {
+            "id": "wujixue",
+            "name": "无极雪水疗中心",
+            "x": 3486,
+            "y": 2790,
+            "width": 765,
+            "height": 467,
+            "route": "/huizhou/wujixue"
+        }
+    ],
+    "huizhouImageSize": {
+        "width": 6142,
+        "height": 3898
+    },
     "homeHotspots": [
         {
             "id": "qimen",
