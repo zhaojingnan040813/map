@@ -1,39 +1,41 @@
 <template>
-  <div class="product-detail-page">
-    <div v-if="product" class="detail-container">
-      <div class="detail-header">
-        <button class="back-button" @click="goBack">
-          <img src="../../assets/back.svg" alt="返回" class="back-icon" />
-        </button>
-        <h1 class="product-title">{{ product.name }}</h1>
+  <div class="detail-page-layout">
+    <div class="detail-header">
+      <button class="back-button" @click="goBack">
+        <img src="../../assets/back.svg" alt="返回" class="back-icon" />
+      </button>
+      <h1 class="page-title">{{ product?.name }}</h1>
+    </div>
+
+    <div class="detail-content" v-if="product">
+      <div class="left-section">
+        <div class="image-container">
+          <img :src="product.image" :alt="product.name" />
+        </div>
       </div>
 
-      <div class="detail-content">
-        <div class="image-section">
-          <div class="main-image">
-            <img :src="product.image" :alt="product.name" />
+      <div class="right-section">
+        <div class="introduction-card">
+          <h2 class="section-title">产品介绍</h2>
+          <div class="introduction-content">
+            <p>{{ product.details.description }}</p>
           </div>
         </div>
 
-        <div class="info-section">
-          <div class="info-card">
-            <h2 class="section-title">产品介绍</h2>
-            <p class="description-text">{{ product.details.description }}</p>
-            
-            <div class="contact-divider"></div>
-            
-            <div class="contact-info">
-              <div class="contact-item">
-                <img src="../../assets/location.svg" alt="地点" class="contact-icon" />
-                <span class="contact-label">生产厂家</span>
-                <span class="contact-text">{{ product.details.address }}</span>
-              </div>
-              <div class="contact-item">
-                <img src="../../assets/phone.svg" alt="电话" class="contact-icon" />
-                <span class="contact-label">联系人</span>
-                <span class="contact-text">{{ product.details.contact }}</span>
-              </div>
+        <div class="info-card">
+          <div class="info-item">
+            <div class="info-label">
+              <img src="../../assets/location.svg" alt="位置" class="info-icon" />
+              <span>生产厂家</span>
             </div>
+            <div class="info-value">{{ product.details.address }}</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">
+              <img src="../../assets/phone.svg" alt="电话" class="info-icon" />
+              <span>联系人</span>
+            </div>
+            <div class="info-value">{{ product.details.contact }}</div>
           </div>
         </div>
       </div>
@@ -69,23 +71,15 @@ const goBack = () => {
 </script>
 
 <style scoped>
-.product-detail-page {
+.detail-page-layout {
   width: 100%;
   min-height: 100vh;
-  background-image: url('../../png/chanpin/产品背景.png');
+  background-image: url('../../png/tuijian/tuijianXQ/背景图.png');
   background-size: cover;
   background-position: bottom center;
   background-repeat: no-repeat;
   padding: 20px;
   box-sizing: border-box;
-}
-
-.detail-container {
-  position: relative;
-  z-index: 2;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-bottom: 80px;
 }
 
 .detail-header {
@@ -104,7 +98,7 @@ const goBack = () => {
   align-items: center;
   justify-content: center;
   position: absolute;
-  left: 0;
+  left: 130px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
@@ -120,7 +114,7 @@ const goBack = () => {
   display: block;
 }
 
-.product-title {
+.page-title {
   font-size: 36px;
   font-weight: bold;
   color: #675529;
@@ -136,101 +130,106 @@ const goBack = () => {
 }
 
 .detail-content {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
   gap: 30px;
-  align-items: start;
+  padding-bottom: 50px;
 }
 
-.image-section {
-  position: sticky;
-  top: 20px;
-}
-
-.main-image {
-  width: 100%;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-  background: #fff;
-}
-
-.main-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.info-section {
+.left-section {
+  flex: 0 0 45%;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.info-card {
+.right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.image-container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  min-height: 450px;
+  object-fit: cover;
+}
+
+.introduction-card {
   background: transparent;
-  padding: 0;
-  border-radius: 0;
-  box-shadow: none;
-  border: none;
-  position: relative;
+  padding: 0 36px 36px 36px;
 }
 
 .section-title {
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 32px;
+  font-weight: 600;
   color: #88712b;
   margin: 0 0 20px 0;
+  padding-bottom: 12px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
   text-align: center;
 }
 
-.description-text {
-  font-size: 16px;
-  line-height: 1.8;
-  color: #555;
-  margin: 0;
+.introduction-content {
+  font-size: 17px;
+  color: #2c2c2c;
+  line-height: 1.9;
 }
 
-.contact-divider {
-  height: 1px;
-  background: #e0e0e0;
-  margin: 30px 0;
+.introduction-content p {
+  margin: 0 0 20px 0;
+  text-indent: 2em;
 }
 
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.introduction-content p:last-child {
+  margin-bottom: 0;
 }
 
-.contact-item {
+.info-card {
+  background: transparent;
+  padding: 32px 36px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.info-item {
+  margin-bottom: 20px;
+}
+
+.info-item:last-child {
+  margin-bottom: 0;
+}
+
+.info-label {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  font-size: 15px;
-  color: #555;
-}
-
-.contact-icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  min-width: 20px;
-  object-fit: contain;
-}
-
-.contact-label {
+  font-size: 14px;
   font-weight: 600;
-  color: #333;
-  margin-right: 8px;
-  min-width: 80px;
+  color: #8b7355;
+  margin-bottom: 8px;
 }
 
-.contact-text {
-  width: 100%;
-  padding-left: 30px;
-  margin-top: 5px;
-  color: #555;
+.info-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.info-value {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  padding-left: 26px;
 }
 
 .loading-container {
@@ -240,50 +239,67 @@ const goBack = () => {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  color: #fff;
+  color: #333;
   font-size: 20px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 968px) {
   .detail-content {
-    grid-template-columns: 1fr;
+    flex-direction: column;
   }
 
-  .image-section {
-    position: static;
+  .left-section {
+    flex: 1;
   }
 }
 
 @media (max-width: 768px) {
-  .product-detail-page {
-    padding: 15px;
+  .detail-page-layout {
+    padding: 12px;
   }
 
-  .product-title {
+  .back-button {
+    left: 30px;
+  }
+
+  .page-title {
     font-size: 32px;
     padding: 25px 80px;
     min-width: 300px;
   }
 
+  .detail-content {
+    gap: 16px;
+  }
+
+  .info-card,
+  .introduction-card {
+    padding: 20px;
+  }
+
   .section-title {
-    font-size: 22px;
+    font-size: 18px;
   }
 
-  .description-text {
-    font-size: 15px;
+  .introduction-content {
+    font-size: 14px;
   }
 
-  .contact-label {
-    min-width: 70px;
+  .info-label {
+    font-size: 13px;
+  }
+
+  .info-value {
+    font-size: 14px;
   }
 }
 
 @media (max-width: 480px) {
-  .product-detail-page {
-    padding: 10px;
+  .back-button {
+    left: 7px;
   }
 
-  .product-title {
+  .page-title {
     font-size: 24px;
     padding: 20px 50px;
     min-width: 250px;
@@ -292,23 +308,6 @@ const goBack = () => {
   .back-icon {
     width: 40px;
     height: 40px;
-  }
-
-  .section-title {
-    font-size: 20px;
-  }
-
-  .description-text {
-    font-size: 14px;
-  }
-
-  .contact-item {
-    font-size: 14px;
-  }
-
-  .contact-label {
-    min-width: 60px;
-    font-size: 14px;
   }
 }
 </style>
