@@ -284,6 +284,75 @@
                     "introduction": "练江牧场是一个集生态观光、亲子互动、农事体验于一体的休闲农场。牧场位于练江河畔，风景优美，拥有丰富的动物资源和农业体验项目，是家庭游客亲近自然、体验田园生活的绝佳去处。"
                 }
             ]
+        },
+        {
+            "id": "yixian",
+            "name": "黟县",
+            "details": [
+                {
+                    "id": "wumingchu",
+                    "title": "无名初",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市黟县",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "无名初是一处隐于黟县山水间的精品民宿，以返璞归真的理念打造独特的住宿体验。民宿建筑融合徽派传统风格与现代极简设计，环境清幽雅致，让游客在繁忙都市生活之余，寻得一处心灵栖息之所，体验无名无欲的初心生活。"
+                },
+                {
+                    "id": "shuhuaxiaozhen",
+                    "title": "黄山中国书画小镇",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市黟县",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "黄山中国书画小镇是一个以中国传统书画艺术为核心的文化旅游项目。小镇汇聚众多书画名家工作室、艺术展览馆、文创商店，定期举办书画展览、艺术交流活动，为书画爱好者和游客提供沉浸式的艺术文化体验。"
+                },
+                {
+                    "id": "qishuhu",
+                    "title": "奇墅湖休闲旅游度假区",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市黟县奇墅湖",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "奇墅湖休闲旅游度假区依托奇墅湖优美的湖光山色，打造集水上运动、湖畔休闲、生态度假于一体的综合性旅游目的地。度假区内湖水清澈，群山环绕，提供游船观光、垂钓休闲、环湖骑行等多种活动，是亲近自然、放松身心的理想之地。"
+                },
+                {
+                    "id": "zizaigu",
+                    "title": "黟县自在谷",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市黟县",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "黟县自在谷是一处以自然生态和心灵康养为主题的休闲度假目的地。谷内山清水秀，植被茂密，空气清新，提供瑜伽冥想、森林疗愈、有机膳食等特色服务，帮助游客放下都市压力，在自然中找回内心的平静与自在。"
+                },
+                {
+                    "id": "tankou",
+                    "title": "西递潭口康养旅居基地",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市黟县西递镇潭口村",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "西递潭口康养旅居基地毗邻世界文化遗产西递古村，是一处集康养度假、文化体验、长期旅居于一体的综合性项目。基地环境优美，配套完善，提供健康管理、养生服务、文化活动等，为追求高品质康养生活的游客提供理想选择。"
+                },
+                {
+                    "id": "yangqinyuan",
+                    "title": "养亲苑养老服务有限公司",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市黟县",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "养亲苑养老服务有限公司是一家专注于高品质养老服务的机构。公司依托黟县优越的自然环境和深厚的文化底蕴，为老年人提供专业的生活照料、健康管理、文化娱乐等服务，打造温馨舒适的养老社区，让老人安享幸福晚年。"
+                },
+                {
+                    "id": "weixiyuan",
+                    "title": "黄山未晞园森林康养度假酒店",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市黟县",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "黄山未晞园森林康养度假酒店坐落于黟县茂密森林之中，是一家以森林康养为特色的高端度假酒店。酒店名取自诗经'未晞'之意，寓意在晨露未干时分享受自然之美。酒店提供森林浴、芳香疗法、养生膳食等特色服务，让游客在天然氧吧中恢复身心活力。"
+                }
+            ]
         }
     ]
 }

@@ -288,6 +288,75 @@
         "width": 6142,
         "height": 3898
     },
+    "yixianHotspots": [
+        {
+            "id": "wumingchu",
+            "name": "无名初",
+            "x": 1923,
+            "y": 1064,
+            "width": 803,
+            "height": 505,
+            "route": "/yixian/wumingchu"
+        },
+        {
+            "id": "shuhuaxiaozhen",
+            "name": "黄山中国书画小镇",
+            "x": 3128,
+            "y": 1341,
+            "width": 564,
+            "height": 347,
+            "route": "/yixian/shuhuaxiaozhen"
+        },
+        {
+            "id": "qishuhu",
+            "name": "奇墅湖休闲旅游度假区",
+            "x": 3708,
+            "y": 1298,
+            "width": 537,
+            "height": 526,
+            "route": "/yixian/qishuhu"
+        },
+        {
+            "id": "zizaigu",
+            "name": "黟县自在谷",
+            "x": 3953,
+            "y": 1851,
+            "width": 510,
+            "height": 223,
+            "route": "/yixian/zizaigu"
+        },
+        {
+            "id": "tankou",
+            "name": "西递潭口康养旅居基地",
+            "x": 3491,
+            "y": 1933,
+            "width": 456,
+            "height": 363,
+            "route": "/yixian/tankou"
+        },
+        {
+            "id": "yangqinyuan",
+            "name": "养亲苑养老服务有限公司",
+            "x": 2764,
+            "y": 1971,
+            "width": 624,
+            "height": 369,
+            "route": "/yixian/yangqinyuan"
+        },
+        {
+            "id": "weixiyuan",
+            "name": "黄山未晞园森林康养度假酒店",
+            "x": 2857,
+            "y": 2600,
+            "width": 803,
+            "height": 451,
+            "route": "/yixian/weixiyuan"
+        }
+    ],
+    "yixianImageSize": {
+        "width": 6142,
+        "height": 3898
+    },
     "homeHotspots": [
         {
             "id": "qimen",
