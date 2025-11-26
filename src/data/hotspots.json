@@ -357,6 +357,84 @@
         "width": 6142,
         "height": 3898
     },
+    "xiuningHotspots": [
+        {
+            "id": "mosu",
+            "name": "黄山魔宿·厢居集装箱野奢民宿",
+            "x": 2846,
+            "y": 917,
+            "width": 873,
+            "height": 419,
+            "route": "/xiuning/mosu"
+        },
+        {
+            "id": "qiyunshan",
+            "name": "齐云山森林康养基地",
+            "x": 2602,
+            "y": 1629,
+            "width": 537,
+            "height": 450,
+            "route": "/xiuning/qiyunshan"
+        },
+        {
+            "id": "runyan",
+            "name": "黄山润妍医疗美容门诊",
+            "x": 3150,
+            "y": 1602,
+            "width": 499,
+            "height": 472,
+            "route": "/xiuning/runyan"
+        },
+        {
+            "id": "tianjuli",
+            "name": "田居里艺术度假村",
+            "x": 2960,
+            "y": 2193,
+            "width": 700,
+            "height": 375,
+            "route": "/xiuning/tianjuli"
+        },
+        {
+            "id": "youran",
+            "name": "休宁洪天·悠然居",
+            "x": 3741,
+            "y": 2253,
+            "width": 505,
+            "height": 385,
+            "route": "/xiuning/youran"
+        },
+        {
+            "id": "zuyuan",
+            "name": "梦乡村祖源民宿",
+            "x": 3204,
+            "y": 2622,
+            "width": 559,
+            "height": 359,
+            "route": "/xiuning/zuyuan"
+        },
+        {
+            "id": "kuzhushu",
+            "name": "苦株树故事民宿",
+            "x": 3795,
+            "y": 2687,
+            "width": 467,
+            "height": 386,
+            "route": "/xiuning/kuzhushu"
+        },
+        {
+            "id": "lingnan",
+            "name": "岭南度假村",
+            "x": 3812,
+            "y": 3111,
+            "width": 542,
+            "height": 402,
+            "route": "/xiuning/lingnan"
+        }
+    ],
+    "xiuningImageSize": {
+        "width": 6142,
+        "height": 3898
+    },
     "homeHotspots": [
         {
             "id": "qimen",
