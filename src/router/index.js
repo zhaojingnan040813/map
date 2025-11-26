@@ -13,6 +13,7 @@ import Huizhou from '../views/locations/Huizhou.vue'
 import Xiuning from '../views/locations/Xiuning.vue'
 import Tunxi from '../views/locations/Tunxi.vue'
 import Shexian from '../views/locations/Shexian.vue'
+import LocationDetail from '../views/locations/LocationDetail.vue'
 
 const routes = [
   {
@@ -70,39 +71,9 @@ const routes = [
     component: Huangshan
   },
   {
-    path: '/huangshan/tangjiazhuang',
-    name: 'Tangjiazhuang',
-    component: () => import('../views/locations/huangshan/Tangjiazhuang.vue')
-  },
-  {
-    path: '/huangshan/taipinghu',
-    name: 'Taipinghu',
-    component: () => import('../views/locations/huangshan/Taipinghu.vue')
-  },
-  {
-    path: '/huangshan/xianyuanju',
-    name: 'Xianyuanju',
-    component: () => import('../views/locations/huangshan/Xianyuanju.vue')
-  },
-  {
-    path: '/huangshan/huzhu',
-    name: 'Huzhu',
-    component: () => import('../views/locations/huangshan/Huzhu.vue')
-  },
-  {
-    path: '/huangshan/yanwoli',
-    name: 'Yanwoli',
-    component: () => import('../views/locations/huangshan/Yanwoli.vue')
-  },
-  {
-    path: '/huangshan/xingfushijia',
-    name: 'Xingfushijia',
-    component: () => import('../views/locations/huangshan/Xingfushijia.vue')
-  },
-  {
-    path: '/huangshan/chalinchang',
-    name: 'Chalinchang',
-    component: () => import('../views/locations/huangshan/Chalinchang.vue')
+    path: '/:location/:id',
+    name: 'LocationDetail',
+    component: LocationDetail
   },
   {
     path: '/huizhou',

@@ -1,0 +1,73 @@
+{
+    "locations": [
+        {
+            "id": "huangshan",
+            "name": "黄山区",
+            "details": [
+                {
+                    "id": "tangjiazhuang",
+                    "title": "汤家庄民宿集群",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市黄山区汤家庄村",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "汤家庄民宿集群位于黄山区，是集休闲、度假、康养于一体的特色民宿聚集区。这里环境优美，空气清新，是远离城市喧嚣、亲近自然的理想之地。民宿集群保留了徽派建筑的传统风貌，同时融入现代化的设施和服务，为游客提供舒适便捷的住宿体验。"
+                },
+                {
+                    "id": "taipinghu",
+                    "title": "太平湖美丽港湾",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市黄山区太平湖镇",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "太平湖美丽港湾项目依托太平湖优质的自然资源，打造集水上运动、湖畔休闲、生态康养于一体的综合性旅游度假区。太平湖水质清澈，湖光山色相映成趣，是黄山地区著名的旅游胜地。"
+                },
+                {
+                    "id": "xianyuanju",
+                    "title": "仙源居项目",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市黄山区仙源镇",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "仙源居项目位于黄山区仙源镇，是一个融合传统徽州文化与现代养生理念的康养项目。项目依山傍水，环境清幽，提供中医养生、文化体验、休闲度假等多元化服务。"
+                },
+                {
+                    "id": "huzhu",
+                    "title": "黄山互助公社",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市黄山区",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "黄山互助公社是一个创新型的乡村振兴项目，通过整合当地资源，发展乡村旅游、农业体验、民宿经济等产业，带动当地村民共同致富。公社秉承互助共享的理念，为游客提供原汁原味的乡村生活体验。"
+                },
+                {
+                    "id": "yanwoli",
+                    "title": "黄山燕窝里文化旅游景区",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市黄山区燕窝里",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "黄山燕窝里文化旅游景区是一个以徽州文化为主题的综合性旅游景区。景区内保存有大量明清时期的古建筑，展示了徽州地区独特的建筑艺术和人文风情。游客可以在这里感受徽州文化的深厚底蕴，体验传统手工艺制作。"
+                },
+                {
+                    "id": "xingfushijia",
+                    "title": "幸福世家",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市黄山区",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "幸福世家是一个以家庭康养为主题的度假项目，专为老年人和家庭游客设计。项目提供舒适的住宿环境、专业的健康管理服务、丰富的休闲娱乐活动，让每一位来宾都能感受到家的温馨和幸福。"
+                },
+                {
+                    "id": "chalinchang",
+                    "title": "黄山茶林场康养基地",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市黄山区茶林场",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "黄山茶林场康养基地依托茶林场优质的生态环境和丰富的茶文化资源，打造集茶文化体验、森林康养、休闲度假于一体的特色康养基地。基地内茶园连绵，空气清新，负氧离子含量极高，是理想的康养胜地。游客可以在这里采茶、制茶、品茶，深度体验中国茶文化的魅力。"
+                }
+            ]
+        }
+    ]
+}
