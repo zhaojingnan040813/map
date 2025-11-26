@@ -24,12 +24,12 @@
             
             <div class="contact-info">
               <div class="contact-item">
-                <span class="contact-icon">📍</span>
+                <img src="../../assets/location.svg" alt="地点" class="contact-icon" />
                 <span class="contact-label">生产厂家</span>
                 <span class="contact-text">{{ product.details.address }}</span>
               </div>
               <div class="contact-item">
-                <span class="contact-icon">📞</span>
+                <img src="../../assets/phone.svg" alt="电话" class="contact-icon" />
                 <span class="contact-label">联系人</span>
                 <span class="contact-text">{{ product.details.contact }}</span>
               </div>
@@ -211,9 +211,11 @@ const goBack = () => {
 }
 
 .contact-icon {
-  font-size: 20px;
+  width: 20px;
+  height: 20px;
   margin-right: 10px;
-  min-width: 28px;
+  min-width: 20px;
+  object-fit: contain;
 }
 
 .contact-label {
