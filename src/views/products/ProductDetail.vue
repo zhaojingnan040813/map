@@ -206,6 +206,7 @@ const goBack = () => {
 .contact-item {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   font-size: 15px;
   color: #555;
 }
@@ -226,7 +227,9 @@ const goBack = () => {
 }
 
 .contact-text {
-  flex: 1;
+  width: 100%;
+  padding-left: 30px;
+  margin-top: 5px;
   color: #555;
 }
 
