@@ -219,6 +219,75 @@
         "width": 6142,
         "height": 3898
     },
+    "shexianHotspots": [
+        {
+            "id": "gongxiao",
+            "name": "黄山中国供销主题园",
+            "x": 1934,
+            "y": 814,
+            "width": 700,
+            "height": 446,
+            "route": "/shexian/gongxiao"
+        },
+        {
+            "id": "piyunshanzhuang",
+            "name": "歙县披云山庄",
+            "x": 2477,
+            "y": 1287,
+            "width": 586,
+            "height": 325,
+            "route": "/shexian/piyunshanzhuang"
+        },
+        {
+            "id": "yongshe",
+            "name": "雍舍",
+            "x": 2314,
+            "y": 1629,
+            "width": 836,
+            "height": 369,
+            "route": "/shexian/yongshe"
+        },
+        {
+            "id": "xijieyihao",
+            "name": "西街壹号文化产业园",
+            "x": 3166,
+            "y": 1406,
+            "width": 412,
+            "height": 293,
+            "route": "/shexian/xijieyihao"
+        },
+        {
+            "id": "ziyangyanyujiudian",
+            "name": "黄山紫阳烟雨度假酒店",
+            "x": 2802,
+            "y": 2041,
+            "width": 624,
+            "height": 375,
+            "route": "/shexian/ziyangyanyujiudian"
+        },
+        {
+            "id": "jiangshencaoge",
+            "name": "江深草阁康养民宿",
+            "x": 3432,
+            "y": 1851,
+            "width": 645,
+            "height": 804,
+            "route": "/shexian/jiangshencaoge"
+        },
+        {
+            "id": "lianjiangmuchang",
+            "name": "练江牧场",
+            "x": 3345,
+            "y": 917,
+            "width": 787,
+            "height": 592,
+            "route": "/shexian/lianjiangmuchang"
+        }
+    ],
+    "shexianImageSize": {
+        "width": 6142,
+        "height": 3898
+    },
     "homeHotspots": [
         {
             "id": "qimen",

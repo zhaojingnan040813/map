@@ -215,6 +215,75 @@
                     "introduction": "黄山茶林场康养基地依托茶林场优质的生态环境和丰富的茶文化资源，打造集茶文化体验、森林康养、休闲度假于一体的特色康养基地。基地内茶园连绵，空气清新，负氧离子含量极高，是理想的康养胜地。游客可以在这里采茶、制茶、品茶，深度体验中国茶文化的魅力。"
                 }
             ]
+        },
+        {
+            "id": "shexian",
+            "name": "歙县",
+            "details": [
+                {
+                    "id": "gongxiao",
+                    "title": "黄山中国供销主题园",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市歙县",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "黄山中国供销主题园是一个以供销文化为主题的综合性旅游项目。园区展示了中国供销合作社的发展历程和文化内涵，结合徽州地区特色农产品展销、乡村文化体验等内容，为游客提供独特的文化旅游体验。"
+                },
+                {
+                    "id": "piyunshanzhuang",
+                    "title": "歙县披云山庄",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市歙县披云山",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "歙县披云山庄依托披云山优美的自然风光，是一处集休闲度假、商务会议、康养旅居于一体的高品质山庄。山庄环境清幽，建筑融合徽派风格与现代设计，为游客提供舒适的住宿和周到的服务体验。"
+                },
+                {
+                    "id": "yongshe",
+                    "title": "雍舍",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市歙县",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "雍舍是一处以徽州传统民居为载体的精品文化民宿。建筑保留了徽派古建筑的精美雕刻和典雅格局，同时配备现代化设施，让游客在古韵悠长的环境中享受舒适便捷的住宿体验，感受徽州文化的独特魅力。"
+                },
+                {
+                    "id": "xijieyihao",
+                    "title": "西街壹号文化产业园",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市歙县西街壹号",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "西街壹号文化产业园是一个集文化创意、艺术展览、休闲娱乐于一体的综合性文化园区。园区依托歙县深厚的历史文化底蕴，汇聚徽州传统工艺、当代艺术创作等多元文化内容，为游客和艺术爱好者提供丰富的文化体验。"
+                },
+                {
+                    "id": "ziyangyanyujiudian",
+                    "title": "黄山紫阳烟雨度假酒店",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市歙县紫阳",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "黄山紫阳烟雨度假酒店是一家高端度假酒店，坐落于风景秀丽的紫阳地区。酒店以烟雨江南为设计灵感，营造诗意栖居的氛围，提供精致客房、特色餐饮、康养服务等，是休闲度假、商务接待的理想选择。"
+                },
+                {
+                    "id": "jiangshencaoge",
+                    "title": "江深草阁康养民宿",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市歙县",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "江深草阁康养民宿是一处以生态康养为主题的精品民宿。民宿依山傍水，环境清幽，融合徽州传统建筑风格与现代康养理念，提供健康餐饮、养生调理、休闲活动等服务，是都市人群放松身心、康养度假的理想去处。"
+                },
+                {
+                    "id": "lianjiangmuchang",
+                    "title": "练江牧场",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市歙县练江畔",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "练江牧场是一个集生态观光、亲子互动、农事体验于一体的休闲农场。牧场位于练江河畔，风景优美，拥有丰富的动物资源和农业体验项目，是家庭游客亲近自然、体验田园生活的绝佳去处。"
+                }
+            ]
         }
     ]
 }
