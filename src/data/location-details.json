@@ -431,6 +431,93 @@
                     "introduction": "岭南度假村是一处集休闲度假、生态观光、康养旅居于一体的综合性度假胜地。度假村依山傍水，风景秀丽，拥有完善的配套设施和优质的服务。游客可以在这里享受山水之间的惬意时光，体验多彩的休闲活动，是家庭出游、团队建设的理想选择。"
                 }
             ]
+        },
+        {
+            "id": "tunxi",
+            "name": "屯溪区",
+            "details": [
+                {
+                    "id": "huiyixiaozhen",
+                    "title": "黄山徽艺小镇",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市屯溪区",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "黄山徽艺小镇是一处以徽州传统工艺文化为核心的特色文旅项目。小镇汇聚徽州传统手工艺、非遗文化、民俗体验等丰富内容，为游客提供沉浸式的徽州文化体验。在这里，您可以亲身体验徽州传统工艺的制作过程，感受徽州文化的独特魅力。"
+                },
+                {
+                    "id": "shengtiandiyangguan",
+                    "title": "圣天地颐养公馆",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市屯溪区",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "圣天地颐养公馆是一家高端康养服务机构，致力于为老年人提供专业的养老服务和健康管理。公馆环境优雅，设施完善，配备专业的医护团队和养生专家，为入住者提供全方位的健康照护和品质生活服务。"
+                },
+                {
+                    "id": "yunrenshedemoyu",
+                    "title": "云人舍得墨韵度假区",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市屯溪区",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "云人舍得墨韵度假区是一处以徽州文化和书画艺术为主题的综合性度假目的地。度假区融合了徽派建筑、山水园林、艺术创作等元素，为游客提供休闲度假、文化体验、艺术创作的独特空间，是修身养性、文化休闲的理想之地。"
+                },
+                {
+                    "id": "changrenchangzheyiyang",
+                    "title": "昌仁长者颐养中心",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市屯溪区",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "昌仁长者颐养中心是一家专业的养老服务机构，以仁爱之心为老年人提供贴心的养老服务。中心拥有舒适的居住环境、专业的护理团队和丰富的文娱活动，让每一位入住的长者都能安享幸福晚年。"
+                },
+                {
+                    "id": "yalvyiyangjidi",
+                    "title": "黄山牙旅医养基地",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市屯溪区",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "黄山牙旅医养基地是一处将口腔健康与康养旅游相结合的创新型项目。基地提供专业的口腔医疗服务，同时结合黄山地区优越的自然环境，为游客打造健康养生与旅游度假相融合的独特体验。"
+                },
+                {
+                    "id": "bangxiakangyang",
+                    "title": "傍霞康养基地",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市屯溪区",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "傍霞康养基地依托屯溪区优美的自然环境，打造集健康养生、休闲度假、生态观光于一体的综合性康养目的地。基地环境清幽，空气清新，提供中医养生、运动健身、营养膳食等多元化康养服务，是都市人群放松身心的理想选择。"
+                },
+                {
+                    "id": "hushixuejizhongyi",
+                    "title": "黄山胡氏雪记中医诊所",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市屯溪区",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "黄山胡氏雪记中医诊所是一家传承百年的中医诊疗机构。诊所秉承传统中医理念，结合现代诊疗技术，为患者提供专业的中医诊疗、养生保健、康复理疗等服务。胡氏雪记中医以其独特的诊疗方法和显著的疗效，深受当地居民和游客的信赖。"
+                },
+                {
+                    "id": "sanjiangkouminshu",
+                    "title": "三江口民宿集群",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市屯溪区三江口",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "三江口民宿集群位于新安江、横江、率水三江交汇处，是屯溪区重点打造的特色民宿聚集区。这里依山傍水，风景秀丽，汇集了众多风格各异的精品民宿。游客可以在这里体验徽州传统建筑的独特韵味，感受江畔生活的惬意与从容。"
+                },
+                {
+                    "id": "shuiyunjian",
+                    "title": "水云间",
+                    "imageUrl": "/src/png/placeholder.png",
+                    "address": "安徽省黄山市屯溪区",
+                    "contactName": "待补充",
+                    "contactPhone": "待补充",
+                    "introduction": "水云间是一处以山水意境为设计理念的精品度假民宿。民宿坐落于山水之间，建筑设计融合徽派传统与现代美学，营造出如诗如画的居住氛围。在这里，您可以远离城市喧嚣，尽享山水之间的宁静与美好，体验云水禅心的诗意生活。"
+                }
+            ]
         }
     ]
 }

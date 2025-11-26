@@ -435,6 +435,93 @@
         "width": 6142,
         "height": 3898
     },
+    "tunxiHotspots": [
+        {
+            "id": "huiyixiaozhen",
+            "name": "黄山徽艺小镇",
+            "x": 2401,
+            "y": 662,
+            "width": 570,
+            "height": 391,
+            "route": "/tunxi/huiyixiaozhen"
+        },
+        {
+            "id": "shengtiandiyangguan",
+            "name": "圣天地颐养公馆",
+            "x": 2802,
+            "y": 1086,
+            "width": 521,
+            "height": 353,
+            "route": "/tunxi/shengtiandiyangguan"
+        },
+        {
+            "id": "yunrenshedemoyu",
+            "name": "云人舍得墨韵度假区",
+            "x": 2781,
+            "y": 1488,
+            "width": 558,
+            "height": 466,
+            "route": "/tunxi/yunrenshedemoyu"
+        },
+        {
+            "id": "changrenchangzheyiyang",
+            "name": "昌仁长者颐养中心",
+            "x": 2498,
+            "y": 1976,
+            "width": 804,
+            "height": 413,
+            "route": "/tunxi/changrenchangzheyiyang"
+        },
+        {
+            "id": "yalvyiyangjidi",
+            "name": "黄山牙旅医养基地",
+            "x": 2097,
+            "y": 2313,
+            "width": 575,
+            "height": 488,
+            "route": "/tunxi/yalvyiyangjidi"
+        },
+        {
+            "id": "bangxiakangyang",
+            "name": "傍霞康养基地",
+            "x": 2574,
+            "y": 2720,
+            "width": 559,
+            "height": 418,
+            "route": "/tunxi/bangxiakangyang"
+        },
+        {
+            "id": "hushixuejizhongyi",
+            "name": "黄山胡氏雪记中医诊所",
+            "x": 3350,
+            "y": 1900,
+            "width": 548,
+            "height": 369,
+            "route": "/tunxi/hushixuejizhongyi"
+        },
+        {
+            "id": "sanjiangkouminshu",
+            "name": "三江口民宿集群",
+            "x": 3329,
+            "y": 2329,
+            "width": 645,
+            "height": 337,
+            "route": "/tunxi/sanjiangkouminshu"
+        },
+        {
+            "id": "shuiyunjian",
+            "name": "水云间",
+            "x": 3839,
+            "y": 1661,
+            "width": 569,
+            "height": 348,
+            "route": "/tunxi/shuiyunjian"
+        }
+    ],
+    "tunxiImageSize": {
+        "width": 6142,
+        "height": 3898
+    },
     "homeHotspots": [
         {
             "id": "qimen",
