@@ -32,7 +32,7 @@ import { useRouter } from 'vue-router'
 
 const props = defineProps({
   id: {
-    type: Number,
+    type: [Number, String],
     required: true
   },
   imageUrl: {
@@ -54,13 +54,17 @@ const props = defineProps({
   contact: {
     type: String,
     required: true
+  },
+  detailRouteName: {
+    type: String,
+    default: 'RouteDetail'
   }
 })
 
 const router = useRouter()
 
 const goToDetail = () => {
-  router.push({ name: 'RouteDetail', params: { id: props.id } })
+  router.push({ name: props.detailRouteName, params: { id: props.id } })
 }
 </script>
 

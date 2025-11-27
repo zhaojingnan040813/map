@@ -6,7 +6,7 @@ const FORM_HEAD_UUID = 'b28cec401ebe48d1889516ce9a271ee9'
 export function getRouteList(params = {}) {
   const {
     page = 1,
-    pagesize = 10,
+    pagesize = 100,
     sortid = '',
     isasc = '',
     filters = []
@@ -21,5 +21,16 @@ export function getRouteList(params = {}) {
     sortid,
     isasc,
     filters
+  })
+}
+
+export function getRouteById(id) {
+  return request.post('/appsheets/sheetapi/getFormList', {
+    applicationid: APPLICATION_ID,
+    formheaduuid: FORM_HEAD_UUID,
+    needpage: 0,
+    page: 1,
+    pagesize: 1,
+    filters: [{ key: 'id', value: id }]
   })
 }

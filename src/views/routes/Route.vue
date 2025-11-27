@@ -1,29 +1,30 @@
 <template>
   <div class="route-page">
-    <!-- <div class="route-header">
-      <h1 class="page-title">精选线路</h1>
-      <p class="page-subtitle">探索黄山，发现徽州之美</p>
-    </div> -->
-
     <div class="route-container">
       <h1 class="page-title">安徽省黄山市职工疗休养基地</h1>
-      <div class="route-grid">
-        <RouteCard
-          v-for="route in currentPageRoutes"
-          :key="route.id"
-          :id="route.id"
-          :imageUrl="route.imageUrl"
-          :title="route.title"
-          :description="route.description"
-          :address="route.address"
-          :contact="route.contact"
-        />
-      </div>
 
-      <Pagination
-        v-model:currentPage="currentPage"
-        :totalPages="totalPages"
-      />
+      <div v-if="loading" class="loading-state">加载中...</div>
+      <div v-else-if="error" class="error-state">{{ error }}</div>
+      <template v-else>
+        <div class="route-grid">
+          <RouteCard
+            v-for="route in currentPageRoutes"
+            :key="route.id"
+            :id="route.id"
+            :imageUrl="route.imageUrl"
+            :title="route.title"
+            :description="route.description"
+            :address="route.address"
+            :contact="route.contact"
+            detailRouteName="RouteDetail"
+          />
+        </div>
+
+        <Pagination
+          v-model:currentPage="currentPage"
+          :totalPages="totalPages"
+        />
+      </template>
     </div>
   </div>
 </template>
@@ -32,10 +33,12 @@
 import { ref, computed, onMounted } from 'vue'
 import RouteCard from '../../components/RouteCard.vue'
 import Pagination from '../../components/Pagination.vue'
-import routesData from '../../data/routes.json'
 import { getRouteList } from '@/api/route'
+import { transformRouteData } from '@/utils/dataTransform'
 
-const routes = ref(routesData.routes)
+const routes = ref([])
+const loading = ref(true)
+const error = ref(null)
 const currentPage = ref(1)
 const pageSize = 4
 
@@ -51,10 +54,16 @@ const currentPageRoutes = computed(() => {
 
 onMounted(async () => {
   try {
-    const result = await getRouteList({ page: 1, pagesize: 10 })
-    console.log('线路管理 API 响应结果:', result)
-  } catch (error) {
-    console.error('线路管理 API 请求失败:', error)
+    loading.value = true
+    const result = await getRouteList({ page: 1, pagesize: 100 })
+    if (result.status === 'success' && result.result?.data) {
+      routes.value = transformRouteData(result.result.data)
+    }
+  } catch (err) {
+    error.value = '数据加载失败，请稍后重试'
+    console.error('线路管理 API 请求失败:', err)
+  } finally {
+    loading.value = false
   }
 })
 </script>
@@ -108,6 +117,18 @@ onMounted(async () => {
   max-width: 1400px;
   margin: 0 auto;
   text-align: center;
+}
+
+.loading-state,
+.error-state {
+  padding: 60px 20px;
+  font-size: 18px;
+  color: #675529;
+  text-align: center;
+}
+
+.error-state {
+  color: #dc2626;
 }
 
 .route-grid {

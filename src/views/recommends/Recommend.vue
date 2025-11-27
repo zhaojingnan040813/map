@@ -2,37 +2,43 @@
   <div class="recommend-page">
     <div class="recommend-container">
       <h1 class="page-title">安徽省黄山市职工疗休养基地</h1>
-      <div class="recommend-grid">
-        <RouteCard
-          v-for="recommendation in currentPageRecommendations"
-          :key="recommendation.id"
-          :id="recommendation.id"
-          :imageUrl="recommendation.imageUrl"
-          :title="recommendation.title"
-          :description="recommendation.description"
-          :address="recommendation.address"
-          :contact="recommendation.contact"
-          @click="goToDetail(recommendation.id)"
-        />
-      </div>
 
-      <Pagination
-        v-model:currentPage="currentPage"
-        :totalPages="totalPages"
-      />
+      <div v-if="loading" class="loading-state">加载中...</div>
+      <div v-else-if="error" class="error-state">{{ error }}</div>
+      <template v-else>
+        <div class="recommend-grid">
+          <RouteCard
+            v-for="recommendation in currentPageRecommendations"
+            :key="recommendation.id"
+            :id="recommendation.id"
+            :imageUrl="recommendation.imageUrl"
+            :title="recommendation.title"
+            :description="recommendation.description"
+            :address="recommendation.address"
+            :contact="recommendation.contact"
+            detailRouteName="RecommendDetail"
+          />
+        </div>
+
+        <Pagination
+          v-model:currentPage="currentPage"
+          :totalPages="totalPages"
+        />
+      </template>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
-import { useRouter } from 'vue-router'
+import { ref, computed, onMounted } from 'vue'
 import RouteCard from '../../components/RouteCard.vue'
 import Pagination from '../../components/Pagination.vue'
-import recommendationsData from '../../data/recommendations.json'
+import { getRecommendList } from '@/api/recommend'
+import { transformRecommendData } from '@/utils/dataTransform'
 
-const router = useRouter()
-const recommendations = ref(recommendationsData.recommendations)
+const recommendations = ref([])
+const loading = ref(true)
+const error = ref(null)
 const currentPage = ref(1)
 const pageSize = 4
 
@@ -46,9 +52,20 @@ const currentPageRecommendations = computed(() => {
   return recommendations.value.slice(start, end)
 })
 
-const goToDetail = (id) => {
-  router.push({ name: 'RecommendDetail', params: { id } })
-}
+onMounted(async () => {
+  try {
+    loading.value = true
+    const result = await getRecommendList({ page: 1, pagesize: 100 })
+    if (result.status === 'success' && result.result?.data) {
+      recommendations.value = transformRecommendData(result.result.data)
+    }
+  } catch (err) {
+    error.value = '数据加载失败，请稍后重试'
+    console.error('推荐管理 API 请求失败:', err)
+  } finally {
+    loading.value = false
+  }
+})
 </script>
 
 <style scoped>
@@ -71,6 +88,18 @@ const goToDetail = (id) => {
   max-width: 1400px;
   margin: 0 auto;
   text-align: center;
+}
+
+.loading-state,
+.error-state {
+  padding: 60px 20px;
+  font-size: 18px;
+  color: #675529;
+  text-align: center;
+}
+
+.error-state {
+  color: #dc2626;
 }
 
 .page-title {
