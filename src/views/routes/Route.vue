@@ -29,10 +29,11 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import RouteCard from '../../components/RouteCard.vue'
 import Pagination from '../../components/Pagination.vue'
 import routesData from '../../data/routes.json'
+import { getRouteList } from '@/api/route'
 
 const routes = ref(routesData.routes)
 const currentPage = ref(1)
@@ -46,6 +47,15 @@ const currentPageRoutes = computed(() => {
   const start = (currentPage.value - 1) * pageSize
   const end = start + pageSize
   return routes.value.slice(start, end)
+})
+
+onMounted(async () => {
+  try {
+    const result = await getRouteList({ page: 1, pagesize: 10 })
+    console.log('线路管理 API 响应结果:', result)
+  } catch (error) {
+    console.error('线路管理 API 请求失败:', error)
+  }
 })
 </script>
 
