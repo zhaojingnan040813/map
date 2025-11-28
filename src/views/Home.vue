@@ -120,16 +120,7 @@ onMounted(() => {
   position: absolute;
   pointer-events: auto;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  background-color: rgba(255, 192, 203, 0.3);
-}
-
-.hotspot-area:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.hotspot-area:active {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: transparent;
 }
 
 .hotspot-label {
