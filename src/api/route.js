@@ -6,7 +6,7 @@ const FORM_HEAD_UUID = 'b28cec401ebe48d1889516ce9a271ee9'
 export function getRouteList(params = {}) {
   const {
     page = 1,
-    pagesize = 100,
+    pagesize = 4,
     sortid = '',
     isasc = '',
     filters = []

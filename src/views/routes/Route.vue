@@ -8,7 +8,7 @@
       <template v-else>
         <div class="route-grid">
           <RouteCard
-            v-for="route in currentPageRoutes"
+            v-for="route in routes"
             :key="route.id"
             :id="route.id"
             :imageUrl="route.imageUrl"
@@ -30,7 +30,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 import RouteCard from '../../components/RouteCard.vue'
 import Pagination from '../../components/Pagination.vue'
 import { getRouteList } from '@/api/route'
@@ -40,24 +40,21 @@ const routes = ref([])
 const loading = ref(true)
 const error = ref(null)
 const currentPage = ref(1)
+const total = ref(0)
 const pageSize = 4
 
 const totalPages = computed(() => {
-  return Math.ceil(routes.value.length / pageSize)
+  return Math.ceil(total.value / pageSize)
 })
 
-const currentPageRoutes = computed(() => {
-  const start = (currentPage.value - 1) * pageSize
-  const end = start + pageSize
-  return routes.value.slice(start, end)
-})
-
-onMounted(async () => {
+async function fetchData(page = 1) {
   try {
     loading.value = true
-    const result = await getRouteList({ page: 1, pagesize: 100 })
-    if (result.status === 'success' && result.result?.data) {
-      routes.value = transformRouteData(result.result.data)
+    error.value = null
+    const result = await getRouteList({ page, pagesize: pageSize })
+    if (result.status === 'success') {
+      routes.value = transformRouteData(result.result?.data || [])
+      total.value = result.result?.total || 0
     }
   } catch (err) {
     error.value = '数据加载失败，请稍后重试'
@@ -65,6 +62,14 @@ onMounted(async () => {
   } finally {
     loading.value = false
   }
+}
+
+watch(currentPage, (newPage) => {
+  fetchData(newPage)
+})
+
+onMounted(() => {
+  fetchData(1)
 })
 </script>
 

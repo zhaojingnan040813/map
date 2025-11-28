@@ -8,7 +8,7 @@
       <template v-else>
         <div class="recommend-grid">
           <RouteCard
-            v-for="recommendation in currentPageRecommendations"
+            v-for="recommendation in recommendations"
             :key="recommendation.id"
             :id="recommendation.id"
             :imageUrl="recommendation.imageUrl"
@@ -30,7 +30,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 import RouteCard from '../../components/RouteCard.vue'
 import Pagination from '../../components/Pagination.vue'
 import { getRecommendList } from '@/api/recommend'
@@ -40,24 +40,21 @@ const recommendations = ref([])
 const loading = ref(true)
 const error = ref(null)
 const currentPage = ref(1)
+const total = ref(0)
 const pageSize = 4
 
 const totalPages = computed(() => {
-  return Math.ceil(recommendations.value.length / pageSize)
+  return Math.ceil(total.value / pageSize)
 })
 
-const currentPageRecommendations = computed(() => {
-  const start = (currentPage.value - 1) * pageSize
-  const end = start + pageSize
-  return recommendations.value.slice(start, end)
-})
-
-onMounted(async () => {
+async function fetchData(page = 1) {
   try {
     loading.value = true
-    const result = await getRecommendList({ page: 1, pagesize: 100 })
-    if (result.status === 'success' && result.result?.data) {
-      recommendations.value = transformRecommendData(result.result.data)
+    error.value = null
+    const result = await getRecommendList({ page, pagesize: pageSize })
+    if (result.status === 'success') {
+      recommendations.value = transformRecommendData(result.result?.data || [])
+      total.value = result.result?.total || 0
     }
   } catch (err) {
     error.value = '数据加载失败，请稍后重试'
@@ -65,6 +62,14 @@ onMounted(async () => {
   } finally {
     loading.value = false
   }
+}
+
+watch(currentPage, (newPage) => {
+  fetchData(newPage)
+})
+
+onMounted(() => {
+  fetchData(1)
 })
 </script>
 

@@ -5,7 +5,7 @@ const FORM_HEAD_UUID = '32a0e346c76c11f090090242ac17000a'
 export function getRecommendList(params = {}) {
   const {
     page = 1,
-    pagesize = 100,
+    pagesize = 4,
     sortid = '',
     isasc = '',
     filters = []
