@@ -85,7 +85,7 @@ const handleProductClick = (product) => {
 <style scoped>
 .product-page {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url('../../png/chanpin/产品背景.png');
   background-size: cover;
   background-position: bottom center;
@@ -93,7 +93,7 @@ const handleProductClick = (product) => {
   padding: 0px 20px 80px;
   box-sizing: border-box;
   position: relative;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 .product-container {
