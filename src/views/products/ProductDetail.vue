@@ -35,7 +35,7 @@
               <img src="../../assets/phone.svg" alt="电话" class="info-icon" />
               <span>联系人</span>
             </div>
-            <div class="info-value">{{ product.details.contact }}</div>
+            <div class="info-value">{{ product.details.contactName }} {{ product.details.contactPhone }}</div>
           </div>
         </div>
       </div>

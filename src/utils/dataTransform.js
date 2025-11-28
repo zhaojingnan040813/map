@@ -81,7 +81,8 @@ export function transformSingleProductData(item) {
     details: {
       detailImages: [item.cover?.[0]?.url || ''],
       description: item.desc || '',
-      contact: item.phone || '',
+      contactName: item.contact || '',
+      contactPhone: item.phone || '',
       address: item.manufacturer || ''
     }
   }
