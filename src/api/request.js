@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { getStoredToken } from './auth'
 
 const request = axios.create({
   baseURL: '/api',
@@ -7,7 +8,10 @@ const request = axios.create({
 
 request.interceptors.request.use(
   (config) => {
-    config.headers['Authorization'] = import.meta.env.VITE_API_TOKEN
+    const token = getStoredToken()
+    if (token) {
+      config.headers['Authorization'] = token
+    }
     return config
   },
   (error) => {
