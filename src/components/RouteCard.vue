@@ -121,11 +121,16 @@ const goToDetail = () => {
 
 .route-description {
   font-size: 16px;
-   color: #4b5563;
+  color: #4b5563;
   line-height: 1.8;
   margin: 0 0 16px 0;
   flex: 1;
   text-align: left;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .route-info {
@@ -232,6 +237,11 @@ const goToDetail = () => {
     font-size: 13px;
     margin-bottom: 12px;
     line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .info-item {
