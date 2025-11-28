@@ -16,7 +16,8 @@
         <div class="info-card" v-if="infoItems && infoItems.length">
           <div class="info-item" v-for="(item, index) in infoItems" :key="index">
             <div class="info-label">
-              <span class="info-icon">{{ item.icon }}</span>
+              <img v-if="item.iconType === 'svg'" :src="item.icon" alt="" class="info-icon-svg" />
+              <span v-else class="info-icon">{{ item.icon }}</span>
               <span>{{ item.label }}</span>
             </div>
             <div class="info-value">{{ item.value }}</div>
@@ -207,6 +208,13 @@ const backgroundStyle = computed(() => {
 .info-icon {
   font-size: 18px;
   margin-right: 8px;
+}
+
+.info-icon-svg {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  vertical-align: middle;
 }
 
 .info-value {

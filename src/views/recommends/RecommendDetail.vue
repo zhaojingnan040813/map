@@ -20,6 +20,8 @@ import { useRoute, useRouter } from 'vue-router'
 import DetailPageLayout from '../../components/detail/DetailPageLayout.vue'
 import { getRecommendById } from '@/api/recommend'
 import { transformSingleRecommendData } from '@/utils/dataTransform'
+import locationIcon from '@/assets/location.svg'
+import phoneIcon from '@/assets/phone.svg'
 
 const route = useRoute()
 const router = useRouter()
@@ -49,12 +51,14 @@ const infoItems = computed(() => {
   if (!recommendDetail.value?.details) return []
   return [
     {
-      icon: '📍',
+      icon: locationIcon,
+      iconType: 'svg',
       label: '详细地址',
       value: recommendDetail.value.details.address
     },
     {
-      icon: '👤',
+      icon: phoneIcon,
+      iconType: 'svg',
       label: '联系人',
       value: `${recommendDetail.value.details.contactName}：${recommendDetail.value.details.contactPhone}`
     }
