@@ -29,25 +29,52 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import Pagination from '../../components/Pagination.vue'
-import productsData from '../../data/products.json'
+import { getProductList } from '../../api/product'
+import { transformProductData } from '../../utils/dataTransform'
 
 const router = useRouter()
 const currentPage = ref(1)
 const pageSize = 8
 
-const allProducts = ref(productsData.products)
+const products = ref([])
+const total = ref(0)
+const loading = ref(false)
+const error = ref(null)
 
 const totalPages = computed(() => {
-  return Math.ceil(allProducts.value.length / pageSize)
+  return Math.ceil(total.value / pageSize)
 })
 
 const currentPageProducts = computed(() => {
-  const start = (currentPage.value - 1) * pageSize
-  const end = start + pageSize
-  return allProducts.value.slice(start, end)
+  return products.value
+})
+
+async function fetchData(page = 1) {
+  try {
+    loading.value = true
+    error.value = null
+    const result = await getProductList({ page, pagesize: pageSize })
+    if (result.status === 'success') {
+      products.value = transformProductData(result.result?.data || [])
+      total.value = result.result?.total || 0
+    }
+  } catch (err) {
+    error.value = '数据加载失败，请稍后重试'
+    console.error('产品 API 请求失败:', err)
+  } finally {
+    loading.value = false
+  }
+}
+
+watch(currentPage, (newPage) => {
+  fetchData(newPage)
+})
+
+onMounted(() => {
+  fetchData(1)
 })
 
 const handleProductClick = (product) => {

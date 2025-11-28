@@ -61,3 +61,28 @@ export function transformSingleRecommendData(item) {
     }
   }
 }
+
+export function transformProductData(apiData) {
+  return apiData.map((item, index) => ({
+    id: item.id || String(index + 1),
+    name: item.name || '',
+    shortDescription: item.summary || '',
+    image: item.cover?.[0]?.url || ''
+  }))
+}
+
+export function transformSingleProductData(item) {
+  if (!item) return null
+  return {
+    id: item.id || '',
+    name: item.name || '',
+    shortDescription: item.summary || '',
+    image: item.cover?.[0]?.url || '',
+    details: {
+      detailImages: [item.cover?.[0]?.url || ''],
+      description: item.desc || '',
+      contact: item.phone || '',
+      address: item.manufacturer || ''
+    }
+  }
+}

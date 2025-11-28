@@ -50,18 +50,31 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import productsData from '../../data/products.json'
+import { getProductById } from '../../api/product'
+import { transformSingleProductData } from '../../utils/dataTransform'
 
 const route = useRoute()
 const router = useRouter()
 const product = ref(null)
+const loading = ref(false)
+const error = ref(null)
 
-onMounted(() => {
-  const productId = parseInt(route.params.id)
-  product.value = productsData.products.find(p => p.id === productId)
-  
-  if (!product.value) {
-    router.push('/product')
+onMounted(async () => {
+  try {
+    loading.value = true
+    const id = route.params.id
+    const result = await getProductById(id)
+    if (result.status === 'success' && result.result?.data?.length > 0) {
+      product.value = transformSingleProductData(result.result.data[0])
+    } else {
+      error.value = '未找到产品数据'
+      router.push('/product')
+    }
+  } catch (err) {
+    error.value = '数据加载失败，请稍后重试'
+    console.error('产品详情 API 请求失败:', err)
+  } finally {
+    loading.value = false
   }
 })
 
